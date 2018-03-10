@@ -5,121 +5,107 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-  	 <header class="main-header">
-  	 	<nav class="cite-navigation">
-  	 		<img src="img/logo.jpg" alt="Логотип Седона">
-  	 		<!-- как на стадии разметки понимать Jpg/png/svg ставить в названии файла картинки? Важно ли это?  -->
-  	 		<!-- Правильно ли я понимаю, что для картинки здесь я могу не задавать класс, т.к. в CSS потом я смогу задать все свойства и значения для селектора .main-header img {} и они сработают? -->
-  	 		<!-- в т/з сказано "Логотип не является пунктом меню. Его нужно размечать отдельным элементом." Значит ли это, что я не могу ставить его в <nav> ? -->
-  	 		<ul>
-  	 		<!-- Иногда я не понимаю надо ли задавать класс тегу на том или ином уровне. Например, здесь все пункты шапки одинаковые, значит класса для <nav> будет достаточно? А для <ul> И <li> мы класс не задаем?-->
-  	 			<li>
-  	 				<a href="">Информация</a>
-  	 				<!-- Что указывать в ссылке, когда не знаешь на какой адрес она будет переходить? -->
-  	 			</li>
-  	 			<li>
-  	 				<a href="">Фото и видео</a>
-  	 			</li>
-  	 			<li>
-  	 				<a href="">Карта Штата</a>
-  	 			</li>
-  	 			<li>
-  	 				<a href="">Гостиницы</a>
-  	 			</li>
-  	 		</ul>
-  	 	</nav>
-  	 </header>
-  	 <main class="сontainer">
-  	 	<!-- Подглядела это название класса в лекции. В целом же можно назвать как угодно? -->
-  	 	<h1 class="visually-hidden">Седона</h1>
-  	 	<section class="inro">
-  	 		<h2 class="visually-hidden">О городе</h2>
-  	 		<div>
-  	 		<!-- нужно ли задавать <div> для картнки под навигацией? Нужно ли задавать для <div> класс? Оба объекта внутри него разные, поэтому каждому из них я задавала отдельный класс.-->
-  	 		<!-- является ли картинка и надпись единым целым или это две разные картинки (или больше, если все надписи нарезать отдельно).  -->
-  	 		<!-- Планирую делать резиновость. Как это учитывать на моменте разметки? -->
-  	 			<img class="landscape-image" src="img/landscape.jpg" alt="Пейзаж Седоны">
-  	 			<img class="title" src="img/welcome.jpg" alt="Приветственная надпись">
-  	 			<!-- Нужно ли задавать этим картинкам отдельные классы? -->
-  	 			<!-- Картинка является контентной? В лекции 2 он не пришел к единому мнению, но сказал, что сам поставил бы как декоративную.-->
-  	 		</div>
-  	 		<p class="about">
-  	 			<b>Седона — небольшой городок в Аризоне, заслуживаюющий большего!</b>
-  	 			<!-- а может быть вместо <b> лучше <strong> ? -->
-  	 		</p>
-  	 		<!-- Какому тегу лучше задать класс для <p> или для <b>? -->
-  	 		<p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-  	 		<!-- Имеет ли смысл объединять два абзаца выше в общую оболчку, например <div>? -->
-  	 		<!-- Не ошибка ли вставлять эти два абзаца в раздел к картинке, а не к перечислению преимуществ? -->
-  	 	</section>
-  	 	<section class="why-sedona">
-  	 		<h2 class="visually-hidden">Почему Седона?</h2>
-  	 		<!-- Тут в целом у меня вопрос. 
-  	 			Можно сделать два списка: один для преимуществ (1-5), второй для жилья/еды/сувениров. Но получится ли второй список вставить между первым и вторым пунктом первого списка согласно макету?
-  	 			Или лучше сделать перечисление преимуществ блоками (например <div>), а жилье/еду/сувениры списком. Облегчит ли это позиционирование? Как семантически сделать более правильно? -->
-  	 		<div class="point-1">
-  	 		<!-- Обернула этот блок в <div>, чтобы его легче было позиционировать. Правильная логика? -->
-  	 			<h3>Настоящий городок</h3>
-  	 			<span> - №1 - </span>
-  	 			<!-- В лекции 3 говорилось, что "-" надо рисовать через CSS. А просто "-"" оставить нельзя? -->
-  	 			<p>Седона - не атракцион для туристов, там течет своя жизнь</p>
-  	 		<!-- Картинку не вставляю? Я рассматриваю ее, как декоративный элемент. -->
-  	 			<ul class="advantages">
-  	 			<!-- Картинки не вставляю? Они декоративные -->
-  	 				<li class="accomodation">
-  	 					<h4>Жилье</h4>
-  	 					<!-- Или все таки <span> вместо <h4>. h4 больше не повторяется в документе, поэтому его удобней использовать для последующего описания в CSS без добавления класса. Правильная логика? вообще много классов - это плохо? Надо стремиться уменьшать их количество?-->
-  	 					<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-  	 					<!-- Нужно ли на этапе разметки разделять текст через <br>? Я представляю, что это можно будет сделать потом через CSS. Если да, то как? (рамки блока?) -->
-  	 					<!-- Может правильней поставить <span> вместо <p>? -->
-  	 					<!-- Для <p> не задаю класса, так как можно будет задать через .advantages p {} ? -->
-  	 				</li>
-  	 				<li class="food">
-  	 					<h4>Еда</h4>
-  	 					<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-  	 				</li>
-  	 				<li class="souvenirs">
-  	 					<h4>Сувениры</h4>
-  	 					<p>Не только китайского, но и местного производства!</p>
-  	 				</li>
-  	 			</ul>
-  	 		</div>
-  	 		 <div class="point-2">
-  	 			<h3>Там есть мост дьявола</h3>
-  	 			<span> - №2 - </span>
-  	 			<p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
-  	 			<!-- Картинку не вставляю? Я рассматриваю ее, как декоративный элемент. -->
-  	 		</div>
-  	 		 <div class="point-3">
-  	 			<h3>Небольшая площадь</h3>
-  	 			<span> - №3 - </span>
-  	 			<p>Все достопримечательности находятся очень близко</p>
-  	 		</div>
-  	 		 <div class="point-4">
-  	 			<h3>Красивая дорога</h3>
-  	 			<span> - №4 - </span>
-  	 			<p>Ехать в седону из Лас-Вегаса совсем не скучно!</p>
-  	 		</div>  	 		 
-  	 		<div class="point-5">
-  	 			<h3>Мало туристов</h3>
-  	 			<span> - №5 - </span>
-  	 			<p>Большинство едет в Гранд Каньон и толпится там</p>
-  	 		</div>
-  	 	</section>
-  	 	<section class="booking">
-  	 		<h2 class="visually-hidden">Бронирование</h2>
-  	 		<p class="want-to-book"><b>Заинтересовались?</b></p>
-  	 		<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-  	 		<button class="button">Поиск гостиницы в Седоне</button>
-  	 		<!-- модальное окно всегда ниже футера? по т/з обязательной части - оно всегда открыто, но в дополнительных параметрах - скрыто. Это флияет на расположение в разметке? -->
-  	 		<img src="img/map.jpg" alt="Карта">
-  	 		<!-- Хочу сделать карту интерактивной, что для этого нужно учесть? -->
-  	 	</section>
-  	 </main>
-  	 <footer class="main-footer">
+    <header class="main-header">
+      <a class="main-logo" href="#">
+        <img src="img/logo.jpg" alt="Логотип Седона">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="#">Информация</a>
+          </li>
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="#">Фото и видео</a>
+          </li>
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="#">Карта штата</a>
+          </li>
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="hotels.html">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="сontainer">
+      <section class="inro">
+        <h1 class="visually-hidden">Седона</h1>
+        <div class="intro-pic">
+          <img src="img/welcome.jpg" alt="Приветственная надпись">
+        </div>
+      </section>
+      <!-- а не лишний тут будет div? Если убрать h1, то, вроде бы, у картинки получается бокс section. -->
+      <section class="сontent">
+        <header class="content-header">
+          <h2 class="content-header-title">Седона — небольшой городок в Аризоне, заслуживаюющий большего!</h2>
+          <p class="content-header-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        </header>
+        <!-- <Header> не дерзко?:) Тут точно подошел бы <div>, но их ниже в разметке довольно много, поэтому может хидер уместен? -->
+        <div class="content-reason-wide">
+          <!-- как мы говорили, для 1и2 причины делаю отдельный класс от 3,4,5 причины. Выбирала название класса для 1и2 между "content-reason-wide" и "content-reason-withpic", что лучше отразит идею того, что у 1и2 причины широкий бокс, содержащий картинку?   -->
+          <!-- Это не критично что у элемента <div> такое длинное название класса? -->
+          <h3 class="content-reason-wide-title">Настоящий городок</h3>
+          <span class="content-reason-wide-count">№1</span>
+          <p class="content-reason-wide-text">Седона - не атракцион для туристов, там течет своя жизнь</p>
+        </div>
+        <ul class="content-advantages">
+          <li class="content-advantages-item">
+            <span class="content-advantages-item-title">Жилье</span>
+            <p class="content-advantages-item-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          </li>
+          <li class="content-advantages-item">
+            <span class="content-advantages-item-title">Еда</span>
+            <p class="content-advantages-item-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </li>
+          <li class="content-advantages-item">
+            <span  class="content-advantages-title">Сувениры</span>
+            <p class="content-advantages-item-text">Не только китайского, но и местного производства!</p>
+          </li>
+        </ul>
+  	 		<!-- какие же длинные названия классов получаются... Может я что-то не правильно делаю? Надо ли приписывать всем классам названия классов от родительских классов? Тогда наверное я должна еще и название класса от <mainЮ везде вставить, чтобы полная иерархия была? А сейчас только от текущего <section> -->
+        <div class="content-reason-wide">
+          <h3 class="content-reason-wide-title">Там есть мост дьявола</h3>
+          <span class="content-reason-wide-count">№2</span>
+          <p class="content-reason-wide-text">Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+        </div>
+        <div class="content-reason-short">
+          <h3 class="content-reason-short-title">Небольшая площадь</h3>
+          <span class="content-reason-short-count">№3</span>
+          <p class="content-reason-short-text">Все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="content-reason-short">
+          <h3 class="content-reason-short-title">Красивая дорога</h3>
+          <span class="content-reason-short-count">№4</span>
+          <p class="content-reason-short-text">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+        <div class="content-reason-short">
+          <h3 class="content-reason-short-title">Мало туристов</h3>
+          <span class="content-reason-short-count">№5</span>
+          <p class="content-reason-short-text">Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
+      </section>
+        <!-- А еще в примерах этой статьи: https://github.com/yoksel/common-words/ Там так интересно комбинируют уровень класификации. Например:   
+          <div class="article__author author-article">
+          <img class="author-article__img" src="userpic.png" alt="Клешня Андреевна">
+          <a class="author-article__link" href="#">Клешня Андреевна Долгорукая</a>
+          <div class="author-article__desc">Наш эксперт по чакрам</div>
+          </div> 
+        То есть "-" используют для связанных названий, а, как я поняла, уровень отделяют "_".
+        Нужно ли мне такое использовать. Например:<h3 class="content_reason-short_title">Небольшая площадь</h3>-->
+      <section class="booking">
+        <h2 class="visually-hidden">Бронирование</h2>
+        <p class="booking-title">Заинтересовались?</p>
+        <p class="booking-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <a class="booking-search-button" href="#">Поиск гостиницы в Седоне</a>
+  	 		<!-- Здесь будет форма поиска отелей -->
+      </section>
+      <div class="map" id="map">
+        <h2 class="visually-hidden">Карта города</h2>
+        <img src="img/map.jpg" alt="Карта">
+      </div>
+      <!-- Кстати карту вытащила из раздела Booking. Карта же тянет на отдельный блок? Вот только <div> или все-таки еще одна <section> ? -->
+    </main>
+  	<footer class="main-footer">
   	 	<span class="footer-hashtag">#visitsedona</span>
-  	 	<!-- Уместен ли другой тег? -->
-  	 	<!-- Можно ли оживить хэштег, чтобы как с телефонным номером - перекидывало на список записей с таким хэштегом? -->
   	 	<ul class="footer-social">
   	 		<li>
   	 			<a class="social-button" href="#">Твитер</a>
@@ -130,19 +116,11 @@
   	 		<li>
   	 			<a class="social-button" href="#">Ютуб</a>
   	 		</li>
-  	 		<!-- списала эту разметку из лекции 2 (2:33). Почему так сделано не понимаю.-->
   	 	</ul>
-  	 	<span class="footer-copyright">Website by</span>
-  	 	<a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-  	 		<img src="img/html-academy-logo.jpg" alt="Логотип HTML Academy">
-  	 		<!-- Сохранение адреса картинок через дефис или нижнее подчеркивание? -->
-  	 	</a>
-  	 </footer>
-  	 <section class="modal">
-      <h2 class="visually-hidden">Поиск отелей</h2>
-  	 	<!--                Здесь будет форма                 -->
-  	 	<!-- Все ли является формой или что-то нужно прописать (Дата заезда/ Дата выезда/ взрослые/ дети)? -->
-  	 	<button class="search">Найти</button>
-  	 </section>
+      <address class="footer-copyright">
+  	 	  <span class="footer-copyright-text">Website by</span>
+  	 	  <a class="footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">Логотип HTML Academy</a>
+      </address>
+  	</footer>
   </body>
 </html>
