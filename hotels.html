@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <!-- Нужно ли сейчас что-то сюда дописывать? -->
   </head>
   <body>
   	<header class="main-header">
@@ -21,9 +20,10 @@
           <li class="main-nav-item">
             <a class="main-nav-link" href="#">Карта штата</a>
           </li>
-          <li class="main-nav-item">
-            <a class="main-nav-link" href="hotels.html">Гостиницы</a>
+          <li class="main-nav-item-current">
+            <a class="main-nav-link" href="#">Гостиницы</a>
           </li>
+          <!-- Разбирала Барбершоп, увидела, что они ссылку на текущую страницу помечают в классе через current. Тоже добавила -->
         </ul>
       </nav>
   	</header>
@@ -35,145 +35,106 @@
   	 	</section>
   	 	<section class="hotels">
   	 		<h2 class="visually-hidden">Результаты поиска отеля</h2>
-  	 		<div class="hotels-sorting">
+  	 		<div class="sorting">
           <h3 class="visually-hidden">Сортировка результатов</h3>
-  	 			<span class="hotels-sorting-count">Найдено: 3</span>
-          <ul class="hotels-sorting-list">
-            <li class="hotels-sorting-list-name">Сортировка:</li>
-            <!-- Сортировку добавила тоже в список. Или лучше в <p> до списка? -->
-            <li>
-              <a class="hotels-sorting-list-item" href="#">По цене</a>
-            </li>
-            <li>
-              <a class="hotels-sorting-list-item" href="#">По типу</a>
-            </li>
-            <li>
-              <a class="hotels-sorting-list-item" href="#">По рейтингу</a>
-            </li>
-            <!-- Задала Класс для <a>. Кажется для <li>, в которые обернуты ссылки задавать отдельный класс будет лишним. верно? -->
-          </ul>
-          <div class="hotels-sorting-order">
-            <a class="hotels-sorting-order-button" href="#">
-              <img src="img/small-to-big.jpg" alt="Увелечение цены">
-            </a>
-            <a class="hotels-sorting-order-button" href="#">
-  	 				  <img src="img/big-to-small.jpg" alt="Уменьшение цены">
-            </a>
-            <!-- Правильно я понимаю, что стрелочки сортировки тоже должны быть завернуты в ссылки, так как при нажатии  на них происходит тоже загрузка другой страницы? -->
-            <!-- картинка обернута в ссылку. Кажется ты говорил, что это не лучший вариант. Но эти стрелочки контентные, так что заменить кратинку текстом тут нельзя. -->
-          </div>
-          <!-- div в div - не страшно? -->
-  	 		</div>
-  	 		<article class="hotels-list">
-          <div class="hotels-list-content">
-            <figure class="hotels-list-content-pic">
-              <img src="img/amara-resort.jpg" alt="Отель Amara resort">
-            </figure>
-            <div class="hotels-list-content-info">
-              <h4 class="hotels-list-content-info-name">Amara resort &amp; spa</h4>
-              <p>
-  	 				    <span class="hotels-list-content-info-type">Гостиница</span>
-  	 				    <span class="hotels-list-content-info-price">От 4000 р.</span>
-                <!-- как и на главной, появляется проблема с супер длинными названиями классов. Кажется надо проговорить этот момент с тобой :) -->
-              </p>
-              <!-- Обенрнула оба <span> в <p>. Думала про <div>, но тут вроде мелкий текстовый блок  -->
-              <div class="hotels-list-action">
-  	 				    <a class="hotels-list-action-button-more" href="#">
-                  <p>Подробнее</p>
-                </a>
-                <a class="hotels-list-action-button-book" href="#">
-                  <p>Забронировать</p>
-                </a>
-              </div>
-            </div>
-          </div>
-  	 			<div class="hotels-list-rating">
-            <ul class="hotels-list-rating-stars">
-              <li>
-                <img src="img/stars.jpg" alt="Звезды">
+  	 			<span class="sorting-result">Найдено: 3</span>
+          <div>
+            <p class="sorting-name">Сортировка:</p>
+            <ul class="sorting-list">
+              <li class="sorting-list-item">
+                <a class="sorting-list-link" href="#">По цене</a>
               </li>
-              <li>
-                <img src="img/stars.jpg" alt="Звезды">
+              <li class="sorting-list-item">
+                <a class="sorting-list-link" href="#">По типу</a>
               </li>
-              <li>
-                <img src="img/stars.jpg" alt="Звезды">
-              </li>
-              <li>
-                <img src="img/stars.jpg" alt="Звезды">
+              <li class="sorting-list-item">
+                <a class="sorting-list-link" href="#">По рейтингу</a>
               </li>
             </ul>
-            <!-- Что-то я тут опять немного подвисла. Количество пунктов, соответствует количеству звезд (позже будет ) Эти пункты в списке я заполняю картинками в разметке или все-таки задаю через CSS? Хотя картинки по логике контентные, так что задам их пока через <img> -->
-            <!-- Как обычно про класс. Задала класс только для <ul>. Вроде бы для <li> не потребуются классы? Пугают меня все-таки мои длинные названия классов --> 				
-  	 				<span class="hotels-list-rating-mark">Рейтинг 8,5</span>
+          </div>
+          <div class="sorting-order">
+            <a class="sorting-order-button" href="#">
+              <img src="img/small-to-big.jpg" alt="УвелИчение цены">
+            </a>
+            <a class="sorting-order-button" href="#">
+  	 				  <img src="img/big-to-small.jpg" alt="Уменьшение цены">
+            </a>
+          </div>
+  	 		</div>
+  	 		<article class="product">
+          <div class="product-content">
+            <div class="product-image">
+              <img src="img/amara-resort.jpg" alt="Отель Amara resort &amp; spa">
+            </div>
+            <div class="product-info">
+              <h4 class="product-info-name">Amara resort &amp; spa</h4>
+              <p class="product-info-type">Гостиница
+  	 				    <span class="product-info-price">От 4000 р.</span>
+              </p>
+              <!-- Я удалили <span> для гостиницы. Мне показалось, что это лишний шаг, учитывая, что цену в <spanЮ можно будет спозиционировать внутри <p>. Можно так?-->
+              <div class="product-button">
+  	 				    <a class="product-button-link" href="#">Подробнее</a>
+                <a class="product-button-book" href="#">Забронировать</a>
+              </div>
+            </div>
+          </div>
+  	 			<div class="product-rating">
+            <ul class="product-rating-list">
+              <li class="product-rating-item">1</li>
+              <li class="product-rating-item">2</li>
+              <li class="product-rating-item">3</li>
+              <li class="product-rating-item">4</li>
+            </ul>				
+  	 				<span class="product-rating-mark">Рейтинг 8,5</span>
           </div>
   	 		</article>
-        <article class="hotels-list">
-          <div class="hotels-list-content">
-            <figure class="hotels-list-content-pic">
+        <article class="product">
+          <div class="product-content">
+            <div class="product-image">
               <img src="img/desert-quail.jpg" alt="Отель Desert Quail Inn">
-            </figure>
-            <div class="hotels-list-content-info">
-              <h4 class="hotels-list-content-info-name">Desert Quail Inn</h4>
-              <p>
-                <span class="hotels-list-content-info-type">Мотель</span>
-                <span class="hotels-list-content-info-price">От 3000 р.</span>
+            </div>
+            <div class="product-info">
+              <h4 class="product-info-name">Desert Quail Inn</h4>
+              <p class="product-info-type">Мотель
+                <span class="product-info-price">От 3000 р.</span>
               </p>
-              <div class="hotels-list-action">
-                <a class="hotels-list-action-button-more" href="#">
-                  <p>Подробнее</p>
-                </a>
-                <a class="hotels-list-action-button-book" href="#">
-                  <p>Забронировать</p>
-                </a>
+              <div class="product-button">
+                <a class="product-button-link" href="#">Подробнее</a>
+                <a class="product-button-book" href="#">Забронировать</a>
               </div>
             </div>
           </div>
-          <div class="hotels-list-rating">
-            <ul class="hotels-list-rating-stars">
-              <li>
-                <img src="img/stars.jpg" alt="Звезды">
-              </li>
-              <li>
-                <img src="img/stars.jpg" alt="Звезды">
-              </li>
-              <li>
-                <img src="img/stars.jpg" alt="Звезды">
-              </li>
-            </ul>  
-            <span class="hotels-list-rating-mark">Рейтинг 8,9</span>
+          <div class="product-rating">
+            <ul class="product-rating-list">
+              <li class="product-rating-item">1</li>
+              <li class="product-rating-item">2</li>
+              <li class="product-rating-item">3</li>
+            </ul>       
+            <span class="product-rating-mark">Рейтинг 8,9</span>
           </div>
         </article>
-        <article class="hotels-list">
-          <div class="hotels-list-content">
-            <figure class="hotels-list-content-pic">
+        <article class="product">
+          <div class="product-content">
+            <div class="product-image">
               <img src="img/villas-diablo.jpg" alt="Отель Villas at poco diablo">
-            </figure>
-            <div class="hotels-list-content-info">
-              <h4 class="hotels-list-content-info-name">Villas at poco diablo</h4>
-              <p>
-                <span class="hotels-list-content-info-type">апартаменты</span>
-                <span class="hotels-list-content-info-price">От 2000 р.</span>
+            </div>
+            <div class="product-info">
+              <h4 class="product-info-name">Villas at poco diablo</h4>
+              <p class="product-info-type">Апартаменты
+                <span class="product-info-price">От 2000 р.</span>
               </p>
-              <div class="hotels-list-action">
-                <a class="hotels-list-action-button-more" href="#">
-                  <p>Подробнее</p>
-                </a>
-                <a class="hotels-list-action-button-book" href="#">
-                  <p>Забронировать</p>
-                </a>
+              <div class="product-button">
+                <a class="product-button-link" href="#">Подробнее</a>
+                <a class="product-button-book" href="#">Забронировать</a>
               </div>
             </div>
           </div>
-          <div class="hotels-list-rating">
-            <ul class="hotels-list-rating-stars">
-              <li>
-                <img src="img/stars.jpg" alt="Звезды">
-              </li>
-              <li>
-                <img src="img/stars.jpg" alt="Звезды">
-              </li>
-            </ul>    
-            <span class="hotels-list-rating-mark">Рейтинг 9,2</span>
+          <div class="product-rating">
+            <ul class="product-rating-list">
+              <li class="product-rating-item">1</li>
+              <li class="product-rating-item">2</li>
+            </ul>       
+            <span class="product-rating-mark">Рейтинг 9,2</span>
           </div>
         </article>
   	 	</section>
@@ -181,13 +142,13 @@
     <footer class="main-footer">
       <span class="footer-hashtag">#visitsedona</span>
       <ul class="footer-socials">
-        <li>
+        <li class="socials-item">
           <a class="socials-button" href="#">Твитер</a>
         </li>
-        <li>
+        <li class="socials-item">
           <a class="socials-button" href="#">Фейсбук</a>
         </li>
-        <li>
+        <li class="socials-item">
           <a class="socials-button" href="#">Ютуб</a>
         </li>
       </ul>

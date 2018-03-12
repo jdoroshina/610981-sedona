@@ -33,76 +33,61 @@
           <img src="img/welcome.jpg" alt="Приветственная надпись">
         </div>
       </section>
-      <!-- а не лишний тут будет div? Если убрать h1, то, вроде бы, у картинки получается бокс section. -->
       <section class="сontent">
-        <header class="content-header">
-          <h2 class="content-header-title">Седона — небольшой городок в Аризоне, заслуживаюющий большего!</h2>
-          <p class="content-header-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        </header>
-        <!-- <Header> не дерзко?:) Тут точно подошел бы <div>, но их ниже в разметке довольно много, поэтому может хидер уместен? -->
-        <div class="content-reason-wide">
-          <!-- как мы говорили, для 1и2 причины делаю отдельный класс от 3,4,5 причины. Выбирала название класса для 1и2 между "content-reason-wide" и "content-reason-withpic", что лучше отразит идею того, что у 1и2 причины широкий бокс, содержащий картинку?   -->
-          <!-- Это не критично что у элемента <div> такое длинное название класса? -->
-          <h3 class="content-reason-wide-title">Настоящий городок</h3>
-          <span class="content-reason-wide-count">№1</span>
-          <p class="content-reason-wide-text">Седона - не атракцион для туристов, там течет своя жизнь</p>
+        <div class="content-header">
+          <h2 class="content-title">Седона — небольшой городок в Аризоне, заслуживаюющий большего!</h2>
+          <p class="content-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </div>
-        <ul class="content-advantages">
-          <li class="content-advantages-item">
-            <span class="content-advantages-item-title">Жилье</span>
-            <p class="content-advantages-item-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        <div class="reason">
+          <h3 class="reason-title">Настоящий городок</h3>
+          <span class="reason-count">№1</span>
+          <p class="reason-description">Седона - не атракцион для туристов, там течет своя жизнь</p>
+        </div>
+        <ul class="advantages">
+          <li class="advantages-item">
+            <span class="advantages-item-title">Жилье</span>
+            <p class="advantages-item-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </li>
-          <li class="content-advantages-item">
-            <span class="content-advantages-item-title">Еда</span>
-            <p class="content-advantages-item-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <li class="advantages-item">
+            <span class="advantages-item-title">Еда</span>
+            <p class="advantages-item-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="content-advantages-item">
             <span  class="content-advantages-title">Сувениры</span>
-            <p class="content-advantages-item-text">Не только китайского, но и местного производства!</p>
+            <p class="content-advantages-item-description">Не только китайского, но и местного производства!</p>
           </li>
         </ul>
-  	 		<!-- какие же длинные названия классов получаются... Может я что-то не правильно делаю? Надо ли приписывать всем классам названия классов от родительских классов? Тогда наверное я должна еще и название класса от <mainЮ везде вставить, чтобы полная иерархия была? А сейчас только от текущего <section> -->
-        <div class="content-reason-wide">
-          <h3 class="content-reason-wide-title">Там есть мост дьявола</h3>
-          <span class="content-reason-wide-count">№2</span>
-          <p class="content-reason-wide-text">Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+        <div class="reason">
+          <h3 class="reason-title">Там есть мост дьявола</h3>
+          <span class="reason-count">№2</span>
+          <p class="reason-description">Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
         </div>
-        <div class="content-reason-short">
-          <h3 class="content-reason-short-title">Небольшая площадь</h3>
-          <span class="content-reason-short-count">№3</span>
-          <p class="content-reason-short-text">Все достопримечательности находятся очень близко</p>
+        <div class="reason-min">
+          <h3 class="reason-mintitle">Небольшая площадь</h3>
+          <span class="reason-min-count">№3</span>
+          <p class="reason-min-description">Все достопримечательности находятся очень близко</p>
         </div>
-        <div class="content-reason-short">
-          <h3 class="content-reason-short-title">Красивая дорога</h3>
-          <span class="content-reason-short-count">№4</span>
-          <p class="content-reason-short-text">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+        <div class="reason-min">
+          <h3 class="reason-min-title">Красивая дорога</h3>
+          <span class="reason-min-count">№4</span>
+          <p class="reason-min-description">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
         </div>
-        <div class="content-reason-short">
-          <h3 class="content-reason-short-title">Мало туристов</h3>
-          <span class="content-reason-short-count">№5</span>
-          <p class="content-reason-short-text">Большинство едет в Гранд Каньон и толпится там</p>
+        <div class="reason-min">
+          <h3 class="reason-min-title">Мало туристов</h3>
+          <span class="reason-min-count">№5</span>
+          <p class="reason-min-description">Большинство едет в Гранд Каньон и толпится там</p>
         </div>
       </section>
-        <!-- А еще в примерах этой статьи: https://github.com/yoksel/common-words/ Там так интересно комбинируют уровень класификации. Например:   
-          <div class="article__author author-article">
-          <img class="author-article__img" src="userpic.png" alt="Клешня Андреевна">
-          <a class="author-article__link" href="#">Клешня Андреевна Долгорукая</a>
-          <div class="author-article__desc">Наш эксперт по чакрам</div>
-          </div> 
-        То есть "-" используют для связанных названий, а, как я поняла, уровень отделяют "_".
-        Нужно ли мне такое использовать. Например:<h3 class="content_reason-short_title">Небольшая площадь</h3>-->
       <section class="booking">
         <h2 class="visually-hidden">Бронирование</h2>
         <p class="booking-title">Заинтересовались?</p>
         <p class="booking-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="booking-search-button" href="#">Поиск гостиницы в Седоне</a>
   	 		<!-- Здесь будет форма поиска отелей -->
+        <div class="map" id="map">
+          <img src="img/map.jpg" alt="Карта">
+        </div>
       </section>
-      <div class="map" id="map">
-        <h2 class="visually-hidden">Карта города</h2>
-        <img src="img/map.jpg" alt="Карта">
-      </div>
-      <!-- Кстати карту вытащила из раздела Booking. Карта же тянет на отдельный блок? Вот только <div> или все-таки еще одна <section> ? -->
     </main>
   	<footer class="main-footer">
   	 	<span class="footer-hashtag">#visitsedona</span>
