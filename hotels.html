@@ -7,7 +7,7 @@
   <body>
   	<header class="main-header">
       <a class="main-logo" href="index.html">
-        <img src="img/logo.jpg" alt="Логотип Седона">
+        <img src="img/header-logo.png" width="138" height="70" alt="Логотип Седона">
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
@@ -23,7 +23,7 @@
           <li class="main-nav-item-current">
             <a class="main-nav-link" href="#">Гостиницы</a>
           </li>
-          <!-- Разбирала Барбершоп, увидела, что они ссылку на текущую страницу помечают в классе через current. Тоже добавила -->
+          <!-- Пока оставила current, как было в прошлой версии. Когда посмотрю лекцию по CSS станет наверное понятней, твои примеры в вк. -->
         </ul>
       </nav>
   	</header>
@@ -54,17 +54,18 @@
           </div>
           <div class="sorting-order">
             <a class="sorting-order-button" href="#">
-              <img src="img/small-to-big.jpg" alt="УвелИчение цены">
+              <img src="img/icon-up-dir.svg" width="11" height="10" alt="Увеличение цены">
             </a>
             <a class="sorting-order-button" href="#">
-  	 				  <img src="img/big-to-small.jpg" alt="Уменьшение цены">
+  	 				  <img src="img/icon-down-dir.svg" width="11" height="10" alt="Уменьшение цены">
             </a>
           </div>
+          <!-- в браузере появилась какое-то нижнее подчеркивание между треугольниками - http://take.ms/QhBOS  не понимаю от куда оно вылезло. код вроде бы чистый -->
   	 		</div>
   	 		<article class="product">
           <div class="product-content">
             <div class="product-image">
-              <img src="img/amara-resort.jpg" alt="Отель Amara resort &amp; spa">
+              <img src="img/amara-resort.jpg" width="135" height="90" alt="Отель Amara resort &amp; spa">
             </div>
             <div class="product-info">
               <h4 class="product-info-name">Amara resort &amp; spa</h4>
@@ -91,7 +92,7 @@
         <article class="product">
           <div class="product-content">
             <div class="product-image">
-              <img src="img/desert-quail.jpg" alt="Отель Desert Quail Inn">
+              <img src="img/desert-quail-inn.jpg" width="135" height="90" alt="Отель Desert Quail Inn">
             </div>
             <div class="product-info">
               <h4 class="product-info-name">Desert Quail Inn</h4>
@@ -116,7 +117,7 @@
         <article class="product">
           <div class="product-content">
             <div class="product-image">
-              <img src="img/villas-diablo.jpg" alt="Отель Villas at poco diablo">
+              <img src="img/villas-diablo.jpg" width="135" height="90" alt="Отель Villas at poco diablo">
             </div>
             <div class="product-info">
               <h4 class="product-info-name">Villas at poco diablo</h4>
@@ -141,21 +142,21 @@
   	</main>
     <footer class="main-footer">
       <span class="footer-hashtag">#visitsedona</span>
-      <ul class="footer-socials">
-        <li class="socials-item">
-          <a class="socials-button" href="#">Твитер</a>
+      <ul class="footer-social">
+        <li class="social-item">
+          <a class="social-link" href="#">Твитер</a>
         </li>
-        <li class="socials-item">
-          <a class="socials-button" href="#">Фейсбук</a>
+        <li class="social-item">
+          <a class="social-link" href="#">Фейсбук</a>
         </li>
-        <li class="socials-item">
-          <a class="socials-button" href="#">Ютуб</a>
+        <li class="social-item">
+          <a class="social-link" href="#">Ютуб</a>
         </li>
       </ul>
       <address class="footer-copyright">
         <span class="footer-copyright-text">Website by</span>
         <a class="footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-copyright.jpg" alt="Логотип Html academy">
+          <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип Html academy">
         </a>
       </address>
     </footer>
