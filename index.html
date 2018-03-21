@@ -83,7 +83,30 @@
         <p class="booking-title">Заинтересовались?</p>
         <p class="booking-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="booking-search-button" href="#">Поиск гостиницы в Седоне</a>
-  	 		<!-- Здесь будет форма поиска отелей -->
+        <!-- не нужно ли разметить через <input type="button"> кнопку поиска гостиницы в Седоне?-->
+  	 		<form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="modal-item">
+            <label for="checkin-date">Дата заезда:</label>
+            <input class="checkin-date" type="date" id="checkin-date" name="checkin-date" placeholder="24 апреля 2017" value="">
+          </p>
+          <!-- срабоатет ли  в данном случае type="date"? -->
+          <p class="modal-item">
+            <label for="checkout-date">Дата выезда:</label>
+            <input class="checkout-date" type="date" id="checkout-date" name="checkout-date" placeholder="4 июля 2017" value="">
+          </p>
+          <p class="modal-item">
+            <label for="adult-number">Взрослые:</label>
+            <input class="visually-hidden adult-number" type="number" id="adult-number" name="adult-number" min="1" max="" placeholder="2" value="">
+          </p>
+          <!-- Нужно ли вводить здесь placeholder? Нужно ли добавлять класс "visually-hidden" для последующей стилизации?-->
+          <!-- Ввела два класса для <input> -->
+          <p class="modal-item-kids">
+            <label for="kids-number">Дети:</label>
+            <input class="kids-number" type="number" id="kids-number" name="kids-number" min="0" max="" placeholder="0" value="">
+          </p>
+          <!-- Надо ли вводить значения для всех Value? -->
+          <button class="modal-button" type="submit" value="">Найти</button>
+        </form>
         <div class="map" id="map">
           <img src="img/map.jpg" width="1199" height="594" alt="Карта">
           <!-- Измеряла размер на макете по обрезающему объекту "Прямоугольник 1"- верно? А саму карту сохраняла целиком без обрезки -->

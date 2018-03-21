@@ -31,7 +31,62 @@
   	 	<h1 class="visually-hidden">Выбор отеля</h1>
       <section class="filters">
         <h2 class="visually-hidden">Фильтры для выбора отеля</h2>
-        <!-- Здесь будет формы для фильтров -->
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="post" oninput="rangelowoutput.value=rangelowcount.value" oninput="rangehighoutput.value=rangehighcount.value">
+          <fieldset class="infrastructure-filter">
+            <legend class="infrastructure-filter-title">Инфраструктура:</legend>
+            <ul class="filter-list">
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" type="checkbox" id="pool-checkbox" name="pool-checkbox" value="" checked>
+                <!-- Нужно ли вставлять checked, если отрисовывать галочку будем через CSS/ Скрываю этот чекбокс -ок? -->
+                <label for="pool-checkbox">Бассейн</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-checkbox" type="checkbox" id="parking-checkbox" name="parking-checkbox" value="">
+                <label for="parking-checkbox">Парковка</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-checkbox" type="checkbox" id="wifi-checkbox" name="wifi-checkbox" value="">
+                <label for="wifi-checkbox">Парковка</label>
+              </li>
+              <!-- Не скрываю 2 и 3 чекбокс через класс? -->
+            </ul>
+          </fieldset>
+          <fieldset class="hotel-type-filter">
+            <legend class="hotel-type-filter-title">Тип жилья:</legend>
+            <ul class="filter-list">
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" type="checkbox" id="hotel-checkbox" name="hotel-checkbox" value="" checked>
+                <label for="hotel-checkbox">Гостиница</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-checkbox" type="checkbox" id="motel-checkbox" name="motel-checkbox" value="" checked>
+                <label for="motel-checkbox">Мотель</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-checkbox" type="checkbox" id="apart-checkbox" name="apart-checkbox" value="" checked>
+                <label for="apart-checkbox">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="price-filter">
+            <legend class="price-filter-title">Cтоимость в сутки(р):</legend>
+            <table class="output-result-table">
+              <tr>
+                <td class="output-result-item">
+                  <output name="rangelowoutput">0</output>
+                </td>
+                <td class="output-result-item">
+                  <output name="rangehighoutput">3000</output>
+                </td>
+              </tr>
+            </table>
+            <input class="price-rangelow" type="range" id="rangelowcount" name="rangelowcount" min="0" max="5000" value="0">
+            <!-- Из макета не совсем понятно какой мах необходимо установить -->
+            <input class="price-rangehigh" type="range" id="rangehighcount" name="rangehighcount" min="0" max="5000" value="3000">
+          </fieldset>
+          <!-- что-то вывод двух значений в одной форме не срабатывает. Первый работает, а второй нет. Так вообще можно - два "range" в одной форме? -->
+        </form>
+        <button class="button-submit" type="submit">Показать</button>
   	 	</section>
   	 	<section class="hotels">
   	 		<h2 class="visually-hidden">Результаты поиска отеля</h2>
