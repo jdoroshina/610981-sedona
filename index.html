@@ -3,147 +3,148 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normilize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <a class="main-logo" href="#">
-        <img src="img/header-logo.png" width="138" height="70" alt="Логотип Седона">
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li class="main-nav-item">
-            <a class="main-nav-link" href="#">Информация</a>
-          </li>
-          <li class="main-nav-item">
-            <a class="main-nav-link" href="#">Фото и видео</a>
-          </li>
-          <li class="main-nav-item">
-            <a class="main-nav-link" href="#">Карта штата</a>
-          </li>
-          <li class="main-nav-item">
-            <a class="main-nav-link" href="hotels.html">Гостиницы</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main class="сontainer">
-      <section class="inro">
-        <h1 class="visually-hidden">Седона</h1>
-        <div class="intro-pic">
-          <img src="img/welcome-sedona.png" width="458" height="352" alt="Приветственная надпись Welcome to the gorgeous Sedona">
-        </div>
-      </section>
-      <section class="сontent">
-        <div class="content-header">
-          <h2 class="content-title">Седона — небольшой городок в Аризоне, заслуживаюющий большего!</h2>
-          <p class="content-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        </div>
-        <div class="reason">
-          <h3 class="reason-title">Настоящий городок</h3>
-          <span class="reason-count">№1</span>
-          <p class="reason-description">Седона - не атракцион для туристов, там течет своя жизнь</p>
-        </div>
-        <ul class="advantages">
-          <li class="advantages-item">
-            <span class="advantages-item-title">Жилье</span>
-            <p class="advantages-item-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-          </li>
-          <li class="advantages-item">
-            <span class="advantages-item-title">Еда</span>
-            <p class="advantages-item-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-          </li>
-          <li class="content-advantages-item">
-            <span  class="content-advantages-title">Сувениры</span>
-            <p class="content-advantages-item-description">Не только китайского, но и местного производства!</p>
-          </li>
-        </ul>
-        <div class="reason">
-          <h3 class="reason-title">Там есть мост дьявола</h3>
-          <span class="reason-count">№2</span>
-          <p class="reason-description">Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
-        </div>
-        <div class="reason-min">
-          <h3 class="reason-mintitle">Небольшая площадь</h3>
-          <span class="reason-min-count">№3</span>
-          <p class="reason-min-description">Все достопримечательности находятся очень близко</p>
-        </div>
-        <div class="reason-min">
-          <h3 class="reason-min-title">Красивая дорога</h3>
-          <span class="reason-min-count">№4</span>
-          <p class="reason-min-description">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
-        </div>
-        <div class="reason-min">
-          <h3 class="reason-min-title">Мало туристов</h3>
-          <span class="reason-min-count">№5</span>
-          <p class="reason-min-description">Большинство едет в Гранд Каньон и толпится там</p>
-        </div>
-      </section>
-      <section class="booking">
-        <h2 class="visually-hidden">Бронирование</h2>
-        <p class="booking-title">Заинтересовались?</p>
-        <p class="booking-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button class="booking-search-button" type="button">Поиск гостиницы в Седоне</button>
-        <!-- Нормлаьно ли button стилизуется или нужна обертка?  -->
-  	 		<form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="checkin-form-item">
-            <label class="date-form-title" for="checkin">Дата заезда:</label>
-            <p class="date-input">
-              <input class="checkin-text" type="text" id="checkin" name="checkin" placeholder="24 апреля 2017">
-              <button class="checkin-calendar" type="button"></button>
-              <!-- <button> для календаря - скрываю или нет, запуталась опять - мы к button добавляем картинку, следственно не скрываем? По стайл гайду картинка меняется при наведении/нажатии -->
-            </p>
-          </div>
-          <div class="checkout-form-item">
-            <label class="date-form-title" for="checkout">Дата выезда:</label>
-            <p class="date-input">
-              <input class="checkout-text" type="text" id="checkout" name="checkout" placeholder="4 июля 2017">
-              <button class="checkout-calendar" type="button"></button>
-            </p>
-          </div>
-          <div class="adult-form-item">
-            <label class="guest-number-title" for="adult-number">Взрослые:</label>
-            <p class="guest-number-input">
-              <button class="decrease-button" type="button"></button>
-              <input class="number-text" type="text" id="adult-number" name="adult-number" placeholder="2">
-              <!-- Валидатор ругается на атрибут min/max для <input type="text>" Удалила эти атрибуты, хотя они тут к месту, нельзя же ввести 0 взрослых... Для счетчика детей такая же история.-->
-              <button class="increase-button" type="button"></button>
-            </p>
-          </div>
-          <div class="kids-form-item">
-            <label class="guest-number-title" for="kids-number">Дети:</label>
-            <p class="guest-number-input">
-              <button class="decrease-button" type="button"></button>
-              <input class="number-text" type="text" id="kids-number" name="kids-number" placeholder="0">
-              <button class="increase-button" type="button"></button>
-            </p>
-          </div>
-          <!-- нужно ли задавать разные  названия классов для <button> увелечения и уменьшения кол-ва взрослых/детей? Если задать одинаковые не будет ли конфликта между ячейками при изменении кол-ва с помощью этих кнопок? -->
-          <button class="form-button" type="submit">Найти</button>
-        </form>
-        <div class="map" id="map">
-          <img src="img/map.jpg" width="1199" height="594" alt="Карта">
-        </div>
-      </section>
-    </main>
-  	<footer class="main-footer">
-  	 	<span class="footer-hashtag">#visitsedona</span>
-      <ul class="footer-social">
-        <li class="social-item">
-          <a class="social-link" href="#">Твитер</a>
-        </li>
-        <li class="social-item">
-          <a class="social-link" href="#">Фейсбук</a>
-        </li>
-        <li class="social-item">
-          <a class="social-link" href="#">Ютуб</a>
-        </li>
-      </ul>
-      <address class="footer-copyright">
-  	 	  <span class="footer-copyright-text">Website by</span>
-  	 	  <a class="footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип Html academy">
+    <div class="body-white-background">
+      <header class="main-header">
+        <a class="main-logo" href="#">
+          <img src="img/header-logo.png" width="138" height="70" alt="Логотип Седона">
         </a>
-      </address>
-  	</footer>
+        <nav class="main-navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link-current" href="#">Информация</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Фото и видео</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Карта штата</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="hotels.html">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="сontainer">
+        <section class="intro">
+          <h1 class="visually-hidden">Седона</h1>
+          <div class="intro-image">
+            <img src="img/welcome-sedona.png" width="458" height="352" alt="Приветственная надпись Welcome to the gorgeous Sedona">
+          </div>
+        </section>
+        <section class="сontent">
+          <div class="content-header">
+            <h2 class="content-title">Седона — небольшой городок в Аризоне, заслуживаюющий большего!</h2>
+            <p class="content-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+          </div>
+          <div class="reason">
+            <h3 class="reason-title">Настоящий городок</h3>
+            <span class="reason-count">№1</span>
+            <p class="reason-description">Седона - не атракцион для туристов, там течет своя жизнь</p>
+          </div>
+          <ul class="advantages">
+            <li class="advantages-item">
+              <span class="advantages-item-title">Жилье</span>
+              <p class="advantages-item-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </li>
+            <li class="advantages-item">
+              <span class="advantages-item-title">Еда</span>
+              <p class="advantages-item-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+            <li class="advantages-item">
+              <span class="advantages-item-title">Сувениры</span>
+              <p class="advantages-item-description">Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
+          <div class="reason">
+            <h3 class="reason-title">Там есть мост дьявола</h3>
+            <span class="reason-count">№2</span>
+            <p class="reason-description">Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+          </div>
+          <div class="reason-min">
+            <h3 class="min-title">Небольшая площадь</h3>
+            <span class="min-count">№3</span>
+            <p class="min-description">Все достопримечательности находятся очень близко</p>
+          </div>
+          <div class="reason-min">
+            <h3 class="min-title">Красивая дорога</h3>
+            <span class="min-count">№4</span>
+            <p class="min-description">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+          </div>
+          <div class="reason-min">
+            <h3 class="min-title">Мало туристов</h3>
+            <span class="min-count">№5</span>
+            <p class="min-description">Большинство едет в Гранд Каньон и толпится там</p>
+          </div>
+        </section>
+        <section class="booking">
+          <h2 class="visually-hidden">Бронирование</h2>
+          <p class="booking-title">Заинтересовались?</p>
+          <p class="booking-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <button class="booking-search-button" type="button">Поиск гостиницы в Седоне</button>
+    	 		<form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="checkin-form-item">
+              <label class="date-form-title" for="checkin">Дата заезда:</label>
+              <p class="date-input">
+                <input class="date-input-text" type="text" id="checkin" name="checkin" placeholder="24 апреля 2017">
+                <button class="date-input-calendar" type="button"></button>
+              </p>
+            </div>
+            <div class="checkout-form-item">
+              <label class="date-form-title" for="checkout">Дата выезда:</label>
+              <p class="date-input">
+                <input class="date-input-text" type="text" id="checkout" name="checkout" placeholder="4 июля 2017">
+                <button class="date-input-calendar" type="button"></button>
+              </p>
+            </div>
+            <div class="adult-form-item">
+              <label class="guest-number-title" for="adult-number">Взрослые:</label>
+              <p class="guest-number-input">
+                <button class="decrease-button" type="button"></button>
+                <input class="number-text" type="text" id="adult-number" name="adult-number" placeholder="2">
+                <button class="increase-button" type="button"></button>
+              </p>
+            </div>
+            <div class="kids-form-item">
+              <label class="guest-number-title" for="kids-number">Дети:</label>
+              <p class="guest-number-input">
+                <button class="decrease-button" type="button"></button>
+                <input class="number-text" type="text" id="kids-number" name="kids-number" placeholder="0">
+                <button class="increase-button" type="button"></button>
+              </p>
+            </div>
+            <button class="form-button" type="submit">Найти</button>
+          </form>
+          <div class="map" id="map">
+            <img src="img/map.jpg" width="1199" height="594" alt="Карта">
+          </div>
+        </section>
+      </main>
+    	<footer class="main-footer">
+    	 	<span class="footer-hashtag">#visitsedona</span>
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social-link" href="#">Твитер</a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">Фейсбук</a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">Ютуб</a>
+          </li>
+        </ul>
+        <address class="footer-copyright">
+    	 	  <span class="footer-copyright-text">Website by</span>
+    	 	  <a class="footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип Html academy">
+          </a>
+        </address>
+    	</footer>
+    </div>
   </body>
 </html>

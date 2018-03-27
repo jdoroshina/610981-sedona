@@ -1,0 +1,419 @@
+body  {
+	margin: 0;
+	padding: 0;	
+
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	text-align: center;
+	color: #000000;
+	text-transform: uppercase;
+
+	background-color: #f2f2f2;
+	background-position: top center;
+	/*Если в  body фон - это просто цвет а не картинка, нужно ли заливку центрировать по верху?*/
+}
+
+a {
+	text-decoration: none;
+}
+
+.body-white-background {
+	background-color: #ffffff;
+	/*будет добавлены тень*/
+}
+
+/*HEADER*/
+.main-navigation {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 700;
+}
+
+.navigation-list {
+	list-style: none;	
+}
+
+.navigation-link {
+	color: #000000;
+}
+
+.navigation-link:hover {
+	color: #81b3d2;
+}
+
+.navigation-link:active {
+	color: rgba(0,0,0,0.3);
+	/*Такое решение ок, если в макете прозрачность 30%?*/
+}
+
+.navigation-link-current {
+	color: #766357;
+	/* верное ли это решение стилизовать текущую страницу через отдельный класс или есть более проф.?*/
+}
+
+/*MAIN*/
+.intro {
+	background-image: url("img/background.jpg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	/*GПочему github выдает ошибку и не подключает картинку - http://take.ms/07eK8 ? */
+	/* Маску рисую через svg или вставляю картинкой?*/
+	background-color: #81b3d2;
+}
+
+.content-title {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+}
+
+.content-description {
+	line-height: 26px;
+	color: #333333;
+}
+
+.reason {
+	color: #ffffff;
+
+	background-color: #81b3d2;
+	/*здесь должны быть картинки для 1 и 2 причины*/
+}
+
+.reason-title {
+	font-size: 21px;
+	font-weight: 700;
+}
+
+.reason-count {
+	/*надо нарисовать линии*/
+}
+
+.advantages {
+	list-style: none;
+}
+.advantages-item:first-child {
+	background-image: url("img/icon-1.svg");
+	background-repeat: no-repeat;
+}
+/* Опять не вставляет картинку по ссылке*/
+
+.advantages-item:nth-child(2) {
+	background-image: url("img/icon-2.svg");
+	background-repeat: no-repeat;
+}
+
+.advantages-item:last-child {
+	background-image: url("img/icon-3.svg");
+	background-repeat: no-repeat;
+}
+
+.advantages-item-title {
+	font-size: 21px;
+	font-weight: 700;		
+}
+
+.advantages-item-description {
+	color: #333333;
+}
+
+/* Здесь будет картинка для второй причины*/
+
+.reason-min:not(.min-title) {
+	color: #333333;
+	/* Визуально кажется, что :not не сработал. Почему?? http://take.ms/DfEME */
+}
+
+.min-title {
+	font-size: 21px;
+	font-weight: 700;
+}
+
+.booking-title {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+
+}
+
+.booking-description {
+	line-height: 24px;
+	color: #333333;	
+}
+
+.booking-search-button {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #ffffff;
+
+	background-color: #766357;
+	border: none;
+	/*Нужны ли к*/
+}
+
+.booking-search-button:hover {
+	background-color: #604e43;
+}
+.booking-search-button:active {
+	color: rgba(255,255,255,0.3);
+	background-color: #503e33;
+	/* Почему на active не работает 0.3 прозрачности в rgba? Проверяла на :hover - работает*/
+}
+.modal-form {
+	line-height: 26px;
+	font-weight: 700;
+}
+
+.date-input-calendar {
+	background-image: url("img/calendar.svg");
+	background-repeat: no-repeat;
+}
+
+.decrease-button {}
+/* Отрисовываем минус?*/
+
+.increase-button {}
+/*Отрисовываем плюс?*/
+
+.form-button {
+	font: inherit;
+	font-size: 21px;
+	color: #ffffff;
+
+	background-color: #81b3d2;
+	border: none;
+}
+
+.form-button:hover {
+	background-color: #669ec0;
+}
+
+.form-button:active {
+	color: rgba(255,255,255,0.3);
+	background-color: #5496bd;
+}
+
+.modal-form input {
+	font: inherit;
+	background-color: #f2f2f2;
+	border: 2px #f2f2f2;
+}
+
+.modal-form input:hover {
+	background-color: #ebebeb;
+	border: 2px #ebebeb;
+
+}
+.modal-form input:focus {
+		background-color: #ffffff;
+		outline: 2px solid #e5e5e5;
+}
+
+/* Как задать цвет Placeholder?*/
+/*Как поместить календарь и + - внутрь ормы*/
+
+
+.footer-hashtag {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+}
+
+.social-list {
+	list-style: none;
+}
+
+.social-item {
+	background-color: #81b3d2;
+}
+
+.social-item:hover {
+	background-color: #669ec0;
+}
+
+.social-item:active {
+	background-color: #5496bd;
+	/*как правильно задать прозрачность картинкам 30%?*/
+}
+
+.social-item:first-child {
+	background-image: url("img/twitter.svg");
+	background-repeat: no-repeat;
+}
+
+.social-item:nth-child(2) {
+	background-image: url("img/fb-icon.svg");
+	background-repeat: no-repeat;
+}
+
+.social-item:last-child {
+	background-image: url("img/youtube.svg");
+	background-repeat: no-repeat;
+}
+
+.social-link {
+	color: #ffffff;
+}
+
+.footer-copyright-text {
+	line-height: 26px;
+}
+
+/*.footer-copyright-logo:hover {
+	background-color: #81b3d2
+}
+
+.footer-copyright-logo:active{
+	background-color: #bdbbbc
+}*/
+/* Здесь должны быть состояни логотипа. Нужно нарезать три картинки или как-то можно задать заливку им?*/
+
+/*HOTELS.HTML*/
+
+.filter-form {
+	color: #ffffff;
+
+	background-color: #81b3d2;
+	background-image: url("img/hotels-background.jpg"); 
+	background-repeat: no-repeat;
+}
+
+.filter-title {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.filter-list {
+	list-style: none;
+}
+
+fieldset {
+	border: none;
+}
+
+.filter-checkbox:hover,
+.filter-checkbox:active {
+	/* должны задать картинки с чекбоксами*/
+}
+
+.filter-checkbox:disabled {
+	color: #6a6a6a;
+}
+
+form .button-submit {
+	font: inherit;
+	/*Не понимаю почему кнопка не унаследовала цвет текста от form*/
+	color: #ffffff;
+
+	background-color: rgba(0,0,0,0);
+	border: 2px solid #ffffff;
+}
+
+form .button-submit:hover {
+	color: #000000;
+	background-color: #ffffff;
+	border: 2px solid #ffffff;
+}
+
+.sorting-result {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;	
+}
+
+.sorting div {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.sorting-list {
+	list-style: none;
+}
+
+.sorting-link {
+	color: rgba(0,0,0,0.3);
+	/*необходимо добавить подчеркивание*/
+}
+	
+.sorting-link-current {
+	color: #81b3d2;
+}
+
+.sorting-link:hover {
+	color: #81b3d2;
+}
+
+.sorting-link:active {
+	color: #000000;
+}
+
+.sorting-order-button {
+	color: #cacaca;
+}
+
+.sorting-order-button:hover {}
+.sorting-order-button:active {}
+.sorting-order-button-current {}
+
+/*Как поменять цвета в картинках svg?*/
+
+
+.product-name {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+}
+
+.product-name:hover {
+	color: #81b3d2;
+}
+
+.product-name:active {
+	color: rgba(0,0,0,0.3);
+}
+
+div a {
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.product-button-link {
+	background-color: #81b3d2;
+}
+
+.product-button-link:hover {
+	background-color: #669ec0;
+}
+
+.product-button-link:active {
+	color: rgba(250,250,250,0.3);
+	background-color: #5496bd;
+}
+
+.product-button-book {
+	background-color: #766357
+}
+.product-button-book:hover {
+	background-color: #604e43;
+}
+
+.product-button-book:active {
+	color: rgba(250,250,250,0.3);
+	background-color: #503e33;
+}
+
+.product-rating-list {
+	list-style: none;
+}
+
+.product-rating-item {
+	background-image: url("img/star.svg");
+}
+
+.product-rating-mark {
+	color: #666666;
+	background-color: #f2f2f2;
+
+}
