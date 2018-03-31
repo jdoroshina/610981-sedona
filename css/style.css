@@ -6,32 +6,66 @@ body  {
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
-	text-align: center;
+	/*text-align: center;*/
+	/*возможно потребуется убрать*/
 	color: #000000;
 	text-transform: uppercase;
 
 	background-color: #f2f2f2;
-	background-position: top center;
-	/*Если в  body фон - это просто цвет а не картинка, нужно ли заливку центрировать по верху?*/
+	width: 100%;
 }
 
 a {
 	text-decoration: none;
 }
 
-.body-white-background {
+.container-wrapper {
+	width: 1200px;
+	margin: 0 auto;
 	background-color: #ffffff;
 	/*будет добавлены тень*/
+	/*?Сетка: см. отдельные вопросы про белый фон и подложку 1280рх */
 }
 
 /*HEADER*/
+
+.main-header {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+
+	background-color: transparent;
+}
+/*?Сетка: единственная проблема с таким решением по логотипу - <header> перестает учитывать высоту логотипа, т.е. ломается отступ*/
+
+.main-logo {
+/*	margin: 0 auto;*/
+	left: 50%;
+	width: 138px;
+	height: 70px;
+	position: absolute;
+	transform: translateX(-50%);
+}
+/*?Сетка: Почему margin для логотипа помещает не точно по середине? Необходимо разметсить в центре <header="main-header">*/
+
 .main-navigation {
+	width: 100%;
+	padding-left: 73px;
+	padding-right: 73px;
+	padding-top: 22px;
+	padding-bottom: 8px;
+
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: 700;
 }
-
+/*?Сетка: почему в отладчике width 1200 для nav  выдает ошибку?*/
 .navigation-list {
+	display: flex;
+	flex-direction: row;
+	flex-basis: 1055px;	
+	margin: 0;
+	padding: 0;
 	list-style: none;	
 }
 
@@ -39,96 +73,218 @@ a {
 	color: #000000;
 }
 
+.navigation-item {
+	width: 128px;
+}
+/*?Сетка: не срабатывают padding-top для названий меню. Причем, я установила родительскому блок padding-bottom */
+
+.navigation-item:first-child{
+	padding-right: 112px;
+}
+
+.navigation-item:nth-child(2) {
+	padding-right: 360px;
+}
+
+.navigation-item:nth-child(3) {
+	padding-right: 112px;
+}
+
+/*.navigation-item:last-child a{
+	float: right;
+}*/
+
 .navigation-link:hover {
 	color: #81b3d2;
 }
 
 .navigation-link:active {
 	color: rgba(0,0,0,0.3);
-	/*Такое решение ок, если в макете прозрачность 30%?*/
 }
 
-.navigation-link-current {
+.navigation-link:not([href]) {
 	color: #766357;
-	/* верное ли это решение стилизовать текущую страницу через отдельный класс или есть более проф.?*/
 }
 
-/*MAIN*/
+/*MAIN`````````````````````````````````````````````````````*/
 .intro {
-	background-image: url("img/background.jpg");
-	background-position: 0 0;
+	padding: 62px 371px 80px;
+
+	background-image: url("../img/background.jpg");
 	background-repeat: no-repeat;
-	/*GПочему github выдает ошибку и не подключает картинку - http://take.ms/07eK8 ? */
-	/* Маску рисую через svg или вставляю картинкой?*/
+	background-image: url("../img/mask-for-background.png")
 	background-color: #81b3d2;
 }
+/*Не отображает картинки - как исправить7*/
+
+/*.content-header {
+	width: 216px;
+}*/
 
 .content-title {
+	margin: 0;
+	padding-top: 65px;
+
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
+	text-align: center;	
 }
-
+/*Добавила в html <br> или все-таки лучше через ширину блока текста?*/
 .content-description {
+	padding-top: 40px;
+	padding-bottom: 45px;
+	margin: 0;
+
+	text-align: center;	
 	line-height: 26px;
 	color: #333333;
 }
 
 .reason {
+	width: 400px;
+	padding-top: 50px;
+	padding-bottom: 60px;
 	color: #ffffff;
-
 	background-color: #81b3d2;
-	/*здесь должны быть картинки для 1 и 2 причины*/
 }
 
+.reason:first-of-type {
+	background-image: url("../img/background-true-city.jpg");
+	background-repeat: no-repeat;
+}
+
+.reason:last-of-type {
+	float: right;
+	background-image: url("../img/background-devil-bridge.jpg");
+	background-repeat: no-repeat;
+}
+
+/*картинки не отображаются -как исправить? Даже не отображаются в отладчике, хотя логика вроде бы верная*/
+/*Сетка: float: right- тоже не сработал. Разобраться с правилом. */
+/* Возможно по аналогии с иконками соцсетей лучше задать второй класс и не использовать :of-type?*/
+
 .reason-title {
+	margin: 0 auto;
+	width: 175px;
+	padding-bottom: 25px;
+	
 	font-size: 21px;
 	font-weight: 700;
+	text-align: center;
 }
 
 .reason-count {
-	/*надо нарисовать линии*/
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+}
+/*Сетка:; display: block; - ок для центрации <span>? Я так поняла спан не центруется с помощью margin auto*/
+
+.reason-count::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 9px;
+	height: 2px;
+	background-color: #ffffff;
+	margin-right: 6px;
+	transform: translateY(-50%);
+}
+
+.reason-count::after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 9px;
+	height: 2px;
+	background-color: #ffffff;
+	margin-left: 6px;
+	transform: translateY(-50%);
+}
+
+.min.reason-count::before,
+.min.reason-count::after {
+	background-color: #333333;
+}
+
+.reason-description{
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 310px;
+
+	text-align: center;
 }
 
 .advantages {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
+
+.advantages-item {
+	width: 400px;
+	padding-top: 165px;
+	padding-bottom: 85px;
+
+	background-position: center 60px;
+}
+
 .advantages-item:first-child {
-	background-image: url("img/icon-1.svg");
+	background-image: url("../img/icon-1.svg");
 	background-repeat: no-repeat;
 }
-/* Опять не вставляет картинку по ссылке*/
 
 .advantages-item:nth-child(2) {
-	background-image: url("img/icon-2.svg");
+	background-image: url("../img/icon-2.svg");
 	background-repeat: no-repeat;
 }
 
 .advantages-item:last-child {
-	background-image: url("img/icon-3.svg");
+	background-image: url("../img/icon-3.svg");
 	background-repeat: no-repeat;
 }
+/*не лучше ли тоже задать доп. класс для картинок - например, на случай изменения порядка элементов?*/
 
 .advantages-item-title {
+	display: block;
+/*Сетка: сделала блок, чтобы независеть от длинны слова в span*/
 	font-size: 21px;
-	font-weight: 700;		
+	font-weight: 700;
+	text-align: center;	
 }
 
 .advantages-item-description {
+	padding-top: 20px;
+	width: 290px;
+	margin: 0 auto;
+
 	color: #333333;
+	text-align: center;
 }
 
-/* Здесь будет картинка для второй причины*/
+.reason-min-wrapper{
+	display: flex;
+	flex-direction: row;
+}
 
-.reason-min:not(.min-title) {
+.reason-min {
+	width: 400px;
+	padding-top: 50px;
+	padding-bottom: 60px;
+	
+	background-color: #eeeeee;
+}
+
+/*.reason-min :not(.min-title) {
 	color: #333333;
-	/* Визуально кажется, что :not не сработал. Почему?? http://take.ms/DfEME */
-}
+}*/
+/*элементы .min-title переназвала, а у заголовка остался правильный цвет - пока не разобралась почему, но решила не оживлять правило*/
 
-.min-title {
-	font-size: 21px;
-	font-weight: 700;
-}
+/*Для себя - Сетка: необходимо поправить переносы в текстах по макету (см. доп вопросы) + разобраться с цветом псевдоэлементов в причине 3/4/5*/
 
 .booking-title {
 	font-size: 30px;
@@ -150,32 +306,139 @@ a {
 
 	background-color: #766357;
 	border: none;
-	/*Нужны ли к*/
 }
 
 .booking-search-button:hover {
 	background-color: #604e43;
 }
+
 .booking-search-button:active {
 	color: rgba(255,255,255,0.3);
 	background-color: #503e33;
-	/* Почему на active не работает 0.3 прозрачности в rgba? Проверяла на :hover - работает*/
 }
+
+/*FORM`````````````````````````````*/
 .modal-form {
 	line-height: 26px;
 	font-weight: 700;
 }
 
-.date-input-calendar {
-	background-image: url("img/calendar.svg");
-	background-repeat: no-repeat;
+.modal-form input {
+	font: inherit;
+	background-color: #f2f2f2;
+	border: 2px #f2f2f2;
 }
 
-.decrease-button {}
-/* Отрисовываем минус?*/
+.modal-form input:hover {
+	background-color: #ebebeb;
+	border: 2px #ebebeb;
 
-.increase-button {}
-/*Отрисовываем плюс?*/
+}
+.modal-form input:focus {
+	background-color: #ffffff;
+	outline: 2px solid #e5e5e5;
+}
+
+.input::-webkit-input-placeholder {
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+.input::-moz-placeholder {
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}/* Firefox 19+ */
+.input:-moz-placeholder {
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}/* Firefox 18- */
+.input:-ms-input-placeholder  {
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.date-text{
+	padding-left: 12px;
+}
+/*отступ слева расширил поле ввода влево.  Хотела сделать отступ как в макете. Как исправить7*/
+
+.number-text {
+	text-align: center;
+}
+
+.date-input{
+	position: relative;
+}
+
+.date-input-calendar::before {
+	content: "";
+	position: absolute;
+	background-image: url("../img/calendar.svg");
+	background-repeat: no-repeat;
+}
+/* Календарь не отображается. wtf*/
+/* Это svg. У нас в styleguide три разные подсветки состояний. как задать цвет svg, вставленному ссылкой в CSS? */
+
+/* Для себя - ввести состояния для календаря.*/
+
+.guest-number-input {
+	position: relative;
+}
+
+.decrease-button::before {
+	content: "";
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	width: 11px;
+  	height: 3px;
+  	background-color: #a9a9a9;
+  	transform: translate(-50%, -50%);
+}
+
+.increase-button::before {
+	content: "";
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	width: 11px;
+  	height: 3px;
+  	background-color: #a9a9a9;
+  	transform: translate(-50%, -50%);
+}
+
+.increase-button::after {
+	content: "";
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	width: 3px;
+  	height: 11px;
+  	background-color: #a9a9a9;
+  	transform: translate(-50%, -50%);
+}
+
+/*Для себя- выровнять псевдоэлементы*/
+/*Создала -/+ и календарю, но отображаются кнопки. Дополнительно задаем кнопкам им класс vis-hidden? */
+/*Не отображаются картинки в псевдоэлементах (календари, иконки соцсетей, чекбоксы). Почему?*/
+
+.decrease-button::before:hover,
+.increase-button::before:hover,
+.increase-button::after:hover {
+	background-color: #000000;
+}
+
+.decrease-button::before:active,
+.increase-button::before:active,
+.increase-button::after:active {
+	background-color: #81b3d2;
+}
+
+/*Не срабатывают правила. Ощущение, что правило воздействует на состояние кнопки, а не псевдоэлемента. Что делать?*/
+/*Как задать цвет svg, вставленному ссылкой в CSS? */
 
 .form-button {
 	font: inherit;
@@ -195,25 +458,7 @@ a {
 	background-color: #5496bd;
 }
 
-.modal-form input {
-	font: inherit;
-	background-color: #f2f2f2;
-	border: 2px #f2f2f2;
-}
-
-.modal-form input:hover {
-	background-color: #ebebeb;
-	border: 2px #ebebeb;
-
-}
-.modal-form input:focus {
-		background-color: #ffffff;
-		outline: 2px solid #e5e5e5;
-}
-
-/* Как задать цвет Placeholder?*/
-/*Как поместить календарь и + - внутрь ормы*/
-
+/*FOOTER``````````````````````````````````*/
 
 .footer-hashtag {
 	font-size: 21px;
@@ -226,49 +471,57 @@ a {
 }
 
 .social-item {
+	position: relative;
+}
+
+.social-item {
 	background-color: #81b3d2;
 }
 
-.social-item:hover {
+.social-link-twitter::before {
+	content: "";
+	background-image: url("../img/twitter.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+.social-link-fb::before {
+	content: "";
+	background-image: url("../img/fb-icon.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+.social-link-youtube::before {
+	content: "";
+	background-image: url("../img/youtube.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+}
+/* вставила картинки псевдоэлементами к ссылке. А фон к картинке остается в <li> или тоже переносится в <a>? */
+/* не отображаются картинки соц сетей*/
+
+.social-link:hover {
 	background-color: #669ec0;
 }
 
-.social-item:active {
+.social-link:active {
 	background-color: #5496bd;
-	/*как правильно задать прозрачность картинкам 30%?*/
 }
-
-.social-item:first-child {
-	background-image: url("img/twitter.svg");
-	background-repeat: no-repeat;
-}
-
-.social-item:nth-child(2) {
-	background-image: url("img/fb-icon.svg");
-	background-repeat: no-repeat;
-}
-
-.social-item:last-child {
-	background-image: url("img/youtube.svg");
-	background-repeat: no-repeat;
-}
-
-.social-link {
-	color: #ffffff;
-}
+/* Необходимо задать картинки соц сети прозрачность 30% при нажатии. Это возможно сделать только отдельным правилом для псевдоэлемента или можно как-то добавить в правило выше?*/
 
 .footer-copyright-text {
 	line-height: 26px;
 }
 
-/*.footer-copyright-logo:hover {
-	background-color: #81b3d2
+.footer-copyright-logo path:hover {
+	fill: #81b3d2;
 }
 
-.footer-copyright-logo:active{
-	background-color: #bdbbbc
-}*/
-/* Здесь должны быть состояни логотипа. Нужно нарезать три картинки или как-то можно задать заливку им?*/
+.footer-copyright-logo path:active {
+	fill: #bdbbbc;
+}
+/*Ура, работает. Но состояния работают плохо, так как навести необходимо именно на часть svg, что довольно трудно. как можно сделать работу состояний при наведении в любое место блока <address>. Возможно ссылку надо обернуть в отдельный <div>? */
 
 /*HOTELS.HTML*/
 
@@ -276,7 +529,7 @@ a {
 	color: #ffffff;
 
 	background-color: #81b3d2;
-	background-image: url("img/hotels-background.jpg"); 
+	background-image: url("../img/hotels-background.jpg"); 
 	background-repeat: no-repeat;
 }
 
@@ -293,21 +546,29 @@ fieldset {
 	border: none;
 }
 
-.filter-checkbox:hover,
-.filter-checkbox:active {
-	/* должны задать картинки с чекбоксами*/
+.checkbox-title::before {
+	content: "";
+	background-image: url("../img/checkbox-off.svg");
+	background-repeat: no-repeat;
 }
+
+.filter-checkbox:checked + .checkbox-title::before {
+	content: "";
+	background-image: url("../img/checkbox-on.svg");
+	background-repeat: no-repeat;
+}
+/* Картинки чекбоксов не отобразились*/
 
 .filter-checkbox:disabled {
 	color: #6a6a6a;
 }
+/*Необходимо задать серый цвет для svg в состоянии заблокирован - как задать цвет svg, вставленному ссылкой в CSS? */
 
 form .button-submit {
-	font: inherit;
-	/*Не понимаю почему кнопка не унаследовала цвет текста от form*/
 	color: #ffffff;
 
-	background-color: rgba(0,0,0,0);
+	background-color: #ffffff;
+	background: transparent;
 	border: 2px solid #ffffff;
 }
 
@@ -332,33 +593,41 @@ form .button-submit:hover {
 	list-style: none;
 }
 
-.sorting-link {
-	color: rgba(0,0,0,0.3);
-	/*необходимо добавить подчеркивание*/
-}
-	
-.sorting-link-current {
+.sorting-link:not([href]) {
 	color: #81b3d2;
+	border-bottom: none;
 }
 
+.sorting-link {
+	color: rgba(0,0,0,0.3);
+	text-decoration: none;
+    border-bottom: 1px dotted #81b3d2;
+}
+	
 .sorting-link:hover {
 	color: #81b3d2;
 }
 
 .sorting-link:active {
 	color: #000000;
+	border-bottom: none;
 }
 
-.sorting-order-button {
-	color: #cacaca;
+.sorting-order-button path{
+	fill: #cacaca;
 }
 
-.sorting-order-button:hover {}
-.sorting-order-button:active {}
-.sorting-order-button-current {}
+.sorting-order-button:not([href]) path {
+	fill: #81b3d2;
+}
 
-/*Как поменять цвета в картинках svg?*/
-
+.sorting-order-button path:hover{
+	fill: #81b3d2;
+}
+.sorting-order-button:active path{
+	fill: #000000;
+}
+/*Вроде все состояния работают у стрелок, но давай проговорим. Какая из записей псевдоклассов верней?*/
 
 .product-name {
 	font-size: 21px;
@@ -374,7 +643,7 @@ form .button-submit:hover {
 	color: rgba(0,0,0,0.3);
 }
 
-div a {
+.product-button a {
 	font-weight: 700;
 	color: #ffffff;
 }
@@ -409,7 +678,8 @@ div a {
 }
 
 .product-rating-item {
-	background-image: url("img/star.svg");
+	background-image: url("../img/star.svg");
+	background-repeat: no-repeat;
 }
 
 .product-rating-mark {
@@ -417,3 +687,13 @@ div a {
 	background-color: #f2f2f2;
 
 }
+
+.visually-hidden {
+position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/*Такое свойство ок?*/
