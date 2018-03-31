@@ -71,7 +71,21 @@
             </fieldset>
             <fieldset class="price-filter">
               <legend class="filter-title">Cтоимость в сутки(р):</legend>
-              <!-- Здесь будет бегунок и вывод цены -->
+              <div class="price-controls">
+                <label class="min-price">от 
+                  <input type="text" name="min-price" value="0">
+                </label>
+                <label class="max-price">до 
+                  <input type="text" name="max-price" value="3000">
+                </label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
             </fieldset>
             <button class="button-submit" type="submit">Показать</button>
           </form>
@@ -81,7 +95,7 @@
     	 		<div class="sorting">
             <h3 class="visually-hidden">Сортировка результатов</h3>
     	 			<span class="sorting-result">Найдено: 3</span>
-            <div>
+            <div class="sorting-type">
               <p class="sorting-name">Сортировка:</p>
               <ul class="sorting-list">
                 <li class="sorting-list-item">

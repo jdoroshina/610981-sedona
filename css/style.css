@@ -6,8 +6,6 @@ body  {
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
-	/*text-align: center;*/
-	/*возможно потребуется убрать*/
 	color: #000000;
 	text-transform: uppercase;
 
@@ -24,7 +22,6 @@ a {
 	margin: 0 auto;
 	background-color: #ffffff;
 	/*будет добавлены тень*/
-	/*?Сетка: см. отдельные вопросы про белый фон и подложку 1280рх */
 }
 
 /*HEADER*/
@@ -33,20 +30,16 @@ a {
 	display: flex;
 	flex-direction: row;
 	position: relative;
-
 	background-color: transparent;
 }
-/*?Сетка: единственная проблема с таким решением по логотипу - <header> перестает учитывать высоту логотипа, т.е. ломается отступ*/
 
 .main-logo {
-/*	margin: 0 auto;*/
 	left: 50%;
 	width: 138px;
 	height: 70px;
 	position: absolute;
 	transform: translateX(-50%);
 }
-/*?Сетка: Почему margin для логотипа помещает не точно по середине? Необходимо разметсить в центре <header="main-header">*/
 
 .main-navigation {
 	width: 100%;
@@ -54,18 +47,20 @@ a {
 	padding-right: 73px;
 	padding-top: 22px;
 	padding-bottom: 8px;
+	box-sizing: border-box;
 
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: 700;
 }
-/*?Сетка: почему в отладчике width 1200 для nav  выдает ошибку?*/
+
 .navigation-list {
 	display: flex;
 	flex-direction: row;
 	flex-basis: 1055px;	
 	margin: 0;
 	padding: 0;
+
 	list-style: none;	
 }
 
@@ -76,7 +71,6 @@ a {
 .navigation-item {
 	width: 128px;
 }
-/*?Сетка: не срабатывают padding-top для названий меню. Причем, я установила родительскому блок padding-bottom */
 
 .navigation-item:first-child{
 	padding-right: 112px;
@@ -90,9 +84,6 @@ a {
 	padding-right: 112px;
 }
 
-/*.navigation-item:last-child a{
-	float: right;
-}*/
 
 .navigation-link:hover {
 	color: #81b3d2;
@@ -112,25 +103,30 @@ a {
 
 	background-image: url("../img/background.jpg");
 	background-repeat: no-repeat;
-	background-image: url("../img/mask-for-background.png")
+	background-position: center -85px;
+	background-size: 100%;
 	background-color: #81b3d2;
 }
-/*Не отображает картинки - как исправить7*/
 
-/*.content-header {
-	width: 216px;
-}*/
+.intro::after {
+	content: "";
+
+	background-image: url("../img/mask-for-background.png");
+	background-repeat: no-repeat;
+}
+/*Маска не срабатывает-Разобраться*/
 
 .content-title {
-	margin: 0;
+	margin: 0 auto;
 	padding-top: 65px;
+	width: 450px;
 
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
 	text-align: center;	
 }
-/*Добавила в html <br> или все-таки лучше через ширину блока текста?*/
+
 .content-description {
 	padding-top: 40px;
 	padding-bottom: 45px;
@@ -145,28 +141,30 @@ a {
 	width: 400px;
 	padding-top: 50px;
 	padding-bottom: 60px;
+
 	color: #ffffff;
 	background-color: #81b3d2;
 }
 
-.reason:first-of-type {
+.true-city {
+	padding-right: 800px;
+	/*пространство для фона создала паддингом - ок?*/
+
 	background-image: url("../img/background-true-city.jpg");
 	background-repeat: no-repeat;
+	background-position: right;
 }
 
-.reason:last-of-type {
-	float: right;
+.devil-bridge {
+	padding-left: 800px;
+
 	background-image: url("../img/background-devil-bridge.jpg");
 	background-repeat: no-repeat;
 }
 
-/*картинки не отображаются -как исправить? Даже не отображаются в отладчике, хотя логика вроде бы верная*/
-/*Сетка: float: right- тоже не сработал. Разобраться с правилом. */
-/* Возможно по аналогии с иконками соцсетей лучше задать второй класс и не использовать :of-type?*/
-
 .reason-title {
 	margin: 0 auto;
-	width: 175px;
+	width: 160px;
 	padding-bottom: 25px;
 	
 	font-size: 21px;
@@ -176,11 +174,11 @@ a {
 
 .reason-count {
 	display: block;
-	margin: 0 auto;
 	position: relative;
+	margin: 0 auto;
+	
 	text-align: center;
 }
-/*Сетка:; display: block; - ок для центрации <span>? Я так поняла спан не центруется с помощью margin auto*/
 
 .reason-count::before {
 	content: "";
@@ -196,11 +194,11 @@ a {
 .reason-count::after {
 	content: "";
 	display: inline-block;
+	margin-left: 6px;
 	vertical-align: middle;
 	width: 9px;
 	height: 2px;
 	background-color: #ffffff;
-	margin-left: 6px;
 	transform: translateY(-50%);
 }
 
@@ -222,6 +220,7 @@ a {
 	flex-direction: row;
 	margin: 0;
 	padding: 0;
+
 	list-style: none;
 }
 
@@ -233,25 +232,24 @@ a {
 	background-position: center 60px;
 }
 
-.advantages-item:first-child {
+.accommodation {
 	background-image: url("../img/icon-1.svg");
 	background-repeat: no-repeat;
 }
 
-.advantages-item:nth-child(2) {
+.food {
 	background-image: url("../img/icon-2.svg");
 	background-repeat: no-repeat;
 }
 
-.advantages-item:last-child {
+.souvenir {
 	background-image: url("../img/icon-3.svg");
 	background-repeat: no-repeat;
 }
-/*не лучше ли тоже задать доп. класс для картинок - например, на случай изменения порядка элементов?*/
 
 .advantages-item-title {
 	display: block;
-/*Сетка: сделала блок, чтобы независеть от длинны слова в span*/
+
 	font-size: 21px;
 	font-weight: 700;
 	text-align: center;	
@@ -275,36 +273,54 @@ a {
 	width: 400px;
 	padding-top: 50px;
 	padding-bottom: 60px;
-	
+
+	color: #333333;
 	background-color: #eeeeee;
 }
 
-/*.reason-min :not(.min-title) {
-	color: #333333;
-}*/
-/*элементы .min-title переназвала, а у заголовка остался правильный цвет - пока не разобралась почему, но решила не оживлять правило*/
+.reason-min .reason-title {
+	color: #000000;
+}
 
-/*Для себя - Сетка: необходимо поправить переносы в текстах по макету (см. доп вопросы) + разобраться с цветом псевдоэлементов в причине 3/4/5*/
+.reason-min .reason-description{
+	width: 280px;
+}
+
+.booking {
+	padding-top: 40px;
+}
 
 .booking-title {
+	margin: 0;
+	padding-bottom: 25px;
+
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 700;
-
+	text-align: center;
 }
 
 .booking-description {
+	margin: 0;
+	padding-bottom: 45px;
+
 	line-height: 24px;
-	color: #333333;	
+	color: #333333;
+	text-align: center;
 }
 
 .booking-search-button {
+	display: block;
+	margin: 0 auto;
+	padding: 30px 161px;
+
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
 	color: #ffffff;
 
 	background-color: #766357;
+	background-position: center bottom;
 	border: none;
 }
 
@@ -318,10 +334,31 @@ a {
 }
 
 /*FORM`````````````````````````````*/
+.map-wrapper {
+	position: relative;
+/*	border-top: 1px solid transparent;*/
+}
+
 .modal-form {
+	position: absolute;
+	left: 316px;
+	right: 316px;
+	top: 0px;
+	padding: 55px;
+
+	background-color: #ffffff;
+
 	line-height: 26px;
 	font-weight: 700;
 }
+/*Сделать тень*/
+
+.form-item {
+	display: flex;
+	flex-direction: row;
+	flex-basis: 1055px;
+}
+
 
 .modal-form input {
 	font: inherit;
@@ -363,7 +400,7 @@ a {
 .date-text{
 	padding-left: 12px;
 }
-/*отступ слева расширил поле ввода влево.  Хотела сделать отступ как в макете. Как исправить7*/
+/*отступ слева расширил поле ввода влево.  Хотела сделать отступ как в макете. Как исправить7 - box-sizing*/
 
 .number-text {
 	text-align: center;
@@ -373,9 +410,15 @@ a {
 	position: relative;
 }
 
+.date-input-calendar{
+	font-size: 0;
+}
 .date-input-calendar::before {
 	content: "";
-	position: absolute;
+	width: 50px;
+	height: 50px;
+	display: block;
+/*	position: absolute;*/
 	background-image: url("../img/calendar.svg");
 	background-repeat: no-repeat;
 }
@@ -383,6 +426,12 @@ a {
 /* Это svg. У нас в styleguide три разные подсветки состояний. как задать цвет svg, вставленному ссылкой в CSS? */
 
 /* Для себя - ввести состояния для календаря.*/
+/*вставить в html svg/ позиционировать абсолютом через p или через фон*/
+
+.guest-number-wrapper {
+	display: flex;
+	flex-direction: row
+}
 
 .guest-number-input {
 	position: relative;
@@ -422,18 +471,18 @@ a {
 }
 
 /*Для себя- выровнять псевдоэлементы*/
-/*Создала -/+ и календарю, но отображаются кнопки. Дополнительно задаем кнопкам им класс vis-hidden? */
+/*Создала -/+ и календарю, но отображаются кнопки. Дополнительно задаем кнопкам им класс vis-hidden? нет - задать цвет фона и тд */
 /*Не отображаются картинки в псевдоэлементах (календари, иконки соцсетей, чекбоксы). Почему?*/
 
-.decrease-button::before:hover,
-.increase-button::before:hover,
-.increase-button::after:hover {
+.decrease-button:hover::before,
+.increase-button:hover::before,
+.increase-button:hover::after {
 	background-color: #000000;
 }
 
-.decrease-button::before:active,
-.increase-button::before:active,
-.increase-button::after:active {
+.decrease-button:active::before,
+.increase-button:active::before,
+.increase-button:active::after {
 	background-color: #81b3d2;
 }
 
@@ -459,14 +508,40 @@ a {
 }
 
 /*FOOTER``````````````````````````````````*/
+.main-footer {
+	display: flex;
+	flex-direction: row;
+/*	position: absolute;*/
+	box-sizing: border-box;
+	width: 1200px;
+
+	background-color: #fefefe;
+	opacity: 0.9;
+}
+
+.footer-index{
+	margin-top: -120px;
+}
 
 .footer-hashtag {
+	width: 400px;
+	padding-top: 47px;
+	padding-bottom: 47px;
+	margin: 0 auto;
+
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
+	text-align: center;
 }
 
 .social-list {
+	display: flex;
+	flex-direction: row;
+	width: 400px;
+	margin: 0;
+	padding: 0;
+
 	list-style: none;
 }
 
@@ -474,32 +549,42 @@ a {
 	position: relative;
 }
 
-.social-item {
-	background-color: #81b3d2;
-}
-
 .social-link-twitter::before {
 	content: "";
+	position: absolute;
+	width: 46px;
+	height: 48px;
+
 	background-image: url("../img/twitter.svg");
 	background-repeat: no-repeat;
-	position: absolute;
+	background-position: center center;
+	background-color: #81b3d2
 }
 
 .social-link-fb::before {
 	content: "";
+	position: absolute;
+	width: 46px;
+	height: 48px;
+
 	background-image: url("../img/fb-icon.svg");
 	background-repeat: no-repeat;
-	position: absolute;
+	background-position: center center;
+	background-color: #81b3d2
 }
 
 .social-link-youtube::before {
 	content: "";
+	position: absolute;
+	width: 46px;
+	height: 48px;
+
 	background-image: url("../img/youtube.svg");
 	background-repeat: no-repeat;
-	position: absolute;
+	background-position: center center;
+	background-color: #81b3d2
 }
-/* вставила картинки псевдоэлементами к ссылке. А фон к картинке остается в <li> или тоже переносится в <a>? */
-/* не отображаются картинки соц сетей*/
+/* скрыть надписи */
 
 .social-link:hover {
 	background-color: #669ec0;
@@ -508,24 +593,35 @@ a {
 .social-link:active {
 	background-color: #5496bd;
 }
+
+.social-link-youtube::before:active {
+	opacity: 0.3;
+}
 /* Необходимо задать картинки соц сети прозрачность 30% при нажатии. Это возможно сделать только отдельным правилом для псевдоэлемента или можно как-то добавить в правило выше?*/
+
+
+.footer-copyright {
+	display: flex;
+	flex-direction: row;
+	width: 400px;
+}
 
 .footer-copyright-text {
 	line-height: 26px;
 }
 
-.footer-copyright-logo path:hover {
+.footer-copyright-logo:hover path{
 	fill: #81b3d2;
 }
 
-.footer-copyright-logo path:active {
+.footer-copyright-logo:active path{
 	fill: #bdbbbc;
 }
-/*Ура, работает. Но состояния работают плохо, так как навести необходимо именно на часть svg, что довольно трудно. как можно сделать работу состояний при наведении в любое место блока <address>. Возможно ссылку надо обернуть в отдельный <div>? */
 
-/*HOTELS.HTML*/
-
+/*HOTELS.HTML```````````````````````````````````````````````*/
 .filter-form {
+	display: flex;
+	flex-direction: row;
 	color: #ffffff;
 
 	background-color: #81b3d2;
@@ -548,6 +644,9 @@ fieldset {
 
 .checkbox-title::before {
 	content: "";
+	display: block;
+	width: 27px;
+	height: 23px;
 	background-image: url("../img/checkbox-off.svg");
 	background-repeat: no-repeat;
 }
@@ -559,37 +658,195 @@ fieldset {
 }
 /* Картинки чекбоксов не отобразились*/
 
-.filter-checkbox:disabled {
+/*.filter-checkbox:disabled {
 	color: #6a6a6a;
-}
+}*/
 /*Необходимо задать серый цвет для svg в состоянии заблокирован - как задать цвет svg, вставленному ссылкой в CSS? */
 
-form .button-submit {
-	color: #ffffff;
+/*Форма с двумя бегунками````````````````*/
 
-	background-color: #ffffff;
-	background: transparent;
-	border: 2px solid #ffffff;
+.filter-range {
+  width: 330px;
+  margin: 50px auto; /* для демо */
+
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
-form .button-submit:hover {
-	color: #000000;
-	background-color: #ffffff;
-	border: 2px solid #ffffff;
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.filter-form .button-submit {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.filter-form .button-submit:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
+.sorting {
+	display: flex;
+	flex-direction: row;
+	padding-left: 73px;
+	padding-right: 73px;
 }
 
 .sorting-result {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-right: 40px;
+
 	font-size: 21px;
 	line-height: 26px;
-	font-weight: 700;	
+	font-weight: 700;
+	text-align: left;
 }
 
-.sorting div {
+/*Себе - перепроверить отступы междц элементами*/
+.sorting .sorting-type {
 	font-size: 12px;
 	line-height: 18px;
 }
 
+.sorting-type {
+	display: flex;
+	flex-direction: row;
+}
+
+.sorting-name {
+	margin: 0;
+	padding-top: 34px;
+	padding-bottom: 34px;
+	padding-right: 40px;
+}
+
 .sorting-list {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	padding-top: 34px;
+	padding-bottom: 34px;
+	margin: 0;	
+	margin-right: 505px;
+	width: 238px;
+	justify-content: space-between;
+
 	list-style: none;
 }
 
@@ -613,6 +870,25 @@ form .button-submit:hover {
 	border-bottom: none;
 }
 
+.sorting-order {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 38px;
+	padding-bottom: 38px;
+	width: 34px;
+}
+
+.sorting-order-button {
+/*	width: 11px;
+	height: 10px;*/
+}
+/*себе - перепроверить расстояние между элементами*/
+
+.sorting-order-button:first:child {
+	padding-right: 10px;
+}
+
 .sorting-order-button path{
 	fill: #cacaca;
 }
@@ -621,7 +897,7 @@ form .button-submit:hover {
 	fill: #81b3d2;
 }
 
-.sorting-order-button path:hover{
+.sorting-order-button:hover path{
 	fill: #81b3d2;
 }
 .sorting-order-button:active path{
@@ -629,10 +905,34 @@ form .button-submit:hover {
 }
 /*Вроде все состояния работают у стрелок, но давай проговорим. Какая из записей псевдоклассов верней?*/
 
+.product {
+	display: flex;
+	flex-direction: row;
+	padding: 30px 73px;
+
+	border-top: 1px solid #f6f6f6;
+	border-bottom: 1px solid #f6f6f6;
+}
+
+.product-image {
+	margin-right: 30px;
+}
+
+.product-content {
+	display: flex;
+	flex-direction: row;
+	margin-right: 522px;
+}
+
 .product-name {
+	margin: -7px 0 10px 0;
+	width: 260px;
+
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
+	vertical-align: top;
+	text-align: left;
 }
 
 .product-name:hover {
@@ -643,9 +943,35 @@ form .button-submit:hover {
 	color: rgba(0,0,0,0.3);
 }
 
+.product-info-type {
+	margin: 0;
+	margin-bottom: 12px;
+	width: 183px;
+	box-sizing: border-box;
+
+	text-align: left;
+}
+
+.product-info-price {
+	right: 0px;
+	text-align: right;
+}
+/*найти сдвинуть span вправо*/
+
+.product-button {
+	display: flex;
+	flex-direction: row;
+}
+
 .product-button a {
+	padding: 0 15px;
+	height: 28px;
+	margin-right: 5px;
+
 	font-weight: 700;
 	color: #ffffff;
+	text-align: center;
+	line-height: 28px;
 }
 
 .product-button-link {
@@ -674,6 +1000,11 @@ form .button-submit:hover {
 }
 
 .product-rating-list {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+
 	list-style: none;
 }
 

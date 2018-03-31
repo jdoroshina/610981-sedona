@@ -39,32 +39,32 @@
         </section>
         <section class="сontent">
           <div class="content-header">
-            <h2 class="content-title">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+            <h2 class="content-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p class="content-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           </div>
-          <div class="reason">
+          <div class="reason true-city">
             <h3 class="reason-title">Настоящий городок</h3>
             <span class="reason-count">№1</span>
-            <p class="reason-description">Седона - не атракцион для туристов, там течет своя жизнь</p>
+            <p class="reason-description">Седона - не атракцион для туристов, там&nbsp;течет своя жизнь</p>
           </div>
           <ul class="advantages">
-            <li class="advantages-item">
+            <li class="advantages-item accommodation">
               <span class="advantages-item-title">Жилье</span>
               <p class="advantages-item-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
-            <li class="advantages-item">
+            <li class="advantages-item food">
               <span class="advantages-item-title">Еда</span>
               <p class="advantages-item-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="advantages-item">
+            <li class="advantages-item souvenir">
               <span class="advantages-item-title">Сувениры</span>
               <p class="advantages-item-description">Не только китайского, но и местного производства!</p>
             </li>
           </ul>
-          <div class="reason">
+          <div class="reason devil-bridge">
             <h3 class="reason-title">Там есть мост дьявола</h3>
             <span class="reason-count">№2</span>
-            <p class="reason-description">Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+            <p class="reason-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
           <div class="reason-min-wrapper">
             <div class="reason-min">
@@ -87,47 +87,50 @@
         <section class="booking">
           <h2 class="visually-hidden">Бронирование</h2>
           <p class="booking-title">Заинтересовались?</p>
-          <p class="booking-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <p class="booking-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <button class="booking-search-button" type="button">Поиск гостиницы в Седоне</button>
-    	 		<form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="checkin-form-item">
-              <label class="date-form-title" for="checkin">Дата заезда:</label>
-              <p class="date-input">
-                <input class="date-text input" type="text" id="checkin" name="checkin" placeholder="24 апреля 2017">
-                <button class="date-input-calendar" type="button">Календарь</button>
-              </p>
-            </div>
-            <div class="checkout-form-item">
-              <label class="date-form-title" for="checkout">Дата выезда:</label>
-              <p class="date-input">
-                <input class="date-text input" type="text" id="checkout" name="checkout" placeholder="4 июля 2017">
-                <button class="date-input-calendar" type="button">Календарь</button>  
-              </p>
-            </div>
-            <div class="adult-form-item">
-              <label class="guest-number-title" for="adult-number">Взрослые:</label>
-              <p class="guest-number-input">
-                <button class="decrease-button" type="button">Уменьшить</button>
-                <input class="number-text input" type="text" id="adult-number" name="adult-number" placeholder="2">
-                <button class="increase-button" type="button">Увеличить</button>
-              </p>
-            </div>
-            <div class="kids-form-item">
-              <label class="guest-number-title" for="kids-number">Дети:</label>
-              <p class="guest-number-input">
-                <button class="decrease-button" type="button">Уменьшить</button>
-                <input class="number-text input" type="text" id="kids-number" name="kids-number" placeholder="0">
-                <button class="increase-button" type="button">Увеличить</button>
-              </p>
-            </div>
-            <button class="form-button" type="submit">Найти</button>
-          </form>
-          <div class="map" id="map">
+          <div class="map-wrapper" id="map">
             <img src="img/map.jpg" width="1199" height="594" alt="Карта">
+            <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+              <div class="checkin form-item">
+                <label class="date-form-title" for="checkin">Дата заезда:</label>
+                <p class="date-input">
+                  <input class="date-text input" type="text" id="checkin" name="checkin" placeholder="24 апреля 2017">
+                  <button class="date-input-calendar" type="button">Календарь</button>
+                </p>
+              </div>
+              <div class="checkout form-item">
+                <label class="date-form-title" for="checkout">Дата выезда:</label>
+                <p class="date-input">
+                  <input class="date-text input" type="text" id="checkout" name="checkout" placeholder="4 июля 2017">
+                  <button class="date-input-calendar" type="button">Календарь</button>  
+                  <!-- вставить svg внутрь button -->
+                </p>
+              </div>
+              <div class="guest-number-wrapper">
+                <div class="adult-form-item">
+                  <label class="guest-number-title" for="adult-number">Взрослые:</label>
+                  <p class="guest-number-input">
+                    <button class="decrease-button" type="button">Уменьшить</button>
+                    <input class="number-text input" type="text" id="adult-number" name="adult-number" placeholder="2">
+                    <button class="increase-button" type="button">Увеличить</button>
+                  </p>
+                </div>
+                <div class="kids-form-item">
+                  <label class="guest-number-title" for="kids-number">Дети:</label>
+                  <p class="guest-number-input">
+                    <button class="decrease-button" type="button">Уменьшить</button>
+                    <input class="number-text input" type="text" id="kids-number" name="kids-number" placeholder="0">
+                    <button class="increase-button" type="button">Увеличить</button>
+                  </p>
+                </div>
+              </div>
+              <button class="form-button" type="submit">Найти</button>
+            </form>
           </div>
         </section>
       </main>
-    	<footer class="main-footer">
+    	<footer class="main-footer footer-index">
     	 	<span class="footer-hashtag">#visitsedona</span>
         <ul class="social-list">
           <li class="social-item">
