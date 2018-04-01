@@ -9,27 +9,27 @@
   </head>
   <body>
     <div class="container-wrapper">
-    	<header class="main-header">
-        <a class="main-logo" href="index.html">
+      <header class="main-header">
+        <a class="main-logo">
           <img src="img/header-logo.png" width="138" height="70" alt="Логотип Седона">
         </a>
         <nav class="main-navigation">
           <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Информация</a>
+            <li class="navigation-item left-item">
+              <a class="navigation-link">Информация</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item left-item">
               <a class="navigation-link" href="#">Фото и видео</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item right-item">
               <a class="navigation-link" href="#">Карта штата</a>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-link">Гостиницы</a>
+            <li class="navigation-item right-item">
+              <a class="navigation-link" href="hotels.html">Гостиницы</a>
             </li>
           </ul>
         </nav>
-    	</header>
+      </header>
     	<main class="сontainer">
     	 	<h1 class="visually-hidden">Выбор отеля</h1>
         <section class="filters">
@@ -69,25 +69,27 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-range">
-              <legend class="filter-title">Cтоимость в сутки(р):</legend>
-              <div class="price-controls">
-                <label class="min-price">от 
-                  <input type="text" name="min-price" value="0">
-                </label>
-                <label class="max-price">до 
-                  <input type="text" name="max-price" value="3000">
-                </label>
-              </div>
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar"></div>
+            <div class="filter-wrapper">
+              <fieldset class="filter-range">
+                <legend class="filter-title">Cтоимость в сутки(р):</legend>
+                <div class="price-controls">
+                  <label class="min-price">от 
+                    <input type="text" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">до 
+                    <input type="text" name="max-price" value="3000">
+                  </label>
                 </div>
-                <div class="range-toggle range-toggle-min"></div>
-                <div class="range-toggle range-toggle-max"></div>
-              </div>
-            </fieldset>
-            <button class="button-submit" type="submit">Показать</button>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                </div>
+              </fieldset>
+              <button class="button-submit" type="submit">Показать</button>
+            </div>
           </form>
         </section>
     	 	<section class="hotels">
@@ -136,10 +138,18 @@
             </div>
     	 			<div class="product-rating">
               <ul class="product-rating-list">
-                <li class="product-rating-item">1</li>
-                <li class="product-rating-item">2</li>
-                <li class="product-rating-item">3</li>
-                <li class="product-rating-item">4</li>
+                <li class="product-rating-item">
+                  <span class="visually-hidden">1</span>
+                </li>
+                <li class="product-rating-item">
+                  <span class="visually-hidden">2</span>
+                </li>
+                <li class="product-rating-item">
+                  <span class="visually-hidden">3</span>
+                </li>
+                <li class="product-rating-item">
+                  <span class="visually-hidden">4</span>
+                </li>
               </ul>				
     	 				<span class="product-rating-mark">Рейтинг 8,5</span>
             </div>
@@ -162,9 +172,15 @@
             </div>
             <div class="product-rating">
               <ul class="product-rating-list">
-                <li class="product-rating-item">1</li>
-                <li class="product-rating-item">2</li>
-                <li class="product-rating-item">3</li>
+                <li class="product-rating-item">
+                  <span class="visually-hidden">1</span>
+                </li>
+                <li class="product-rating-item">
+                  <span class="visually-hidden">2</span>
+                </li>
+                <li class="product-rating-item">
+                  <span class="visually-hidden">3</span>
+                </li>
               </ul>       
               <span class="product-rating-mark">Рейтинг 8,9</span>
             </div>
@@ -187,8 +203,12 @@
             </div>
             <div class="product-rating">
               <ul class="product-rating-list">
-                <li class="product-rating-item">1</li>
-                <li class="product-rating-item">2</li>
+                <li class="product-rating-item">
+                  <span class="visually-hidden">1</span>
+                </li>
+                <li class="product-rating-item">
+                  <span class="visually-hidden">2</span>
+                </li>
               </ul>       
               <span class="product-rating-mark">Рейтинг 9,2</span>
             </div>
@@ -199,13 +219,19 @@
         <span class="footer-hashtag">#visitsedona</span>
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-link social-link-twitter" href="#">Твитер</a>
+            <a class="social-link social-link-twitter" href="#">
+              <span class="visually-hidden">Твитер</span>
+            </a>
           </li>
           <li class="social-item">
-            <a class="social-link social-link-fb" href="#">Фейсбук</a>
+            <a class="social-link social-link-fb" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li class="social-item">
-            <a class="social-link social-link-youtube" href="#">Ютуб</a>
+            <a class="social-link social-link-youtube" href="#">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
           </li>
         </ul>
         <address class="footer-copyright">

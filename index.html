@@ -15,16 +15,16 @@
         </a>
         <nav class="main-navigation">
           <ul class="navigation-list">
-            <li class="navigation-item">
+            <li class="navigation-item left-item">
               <a class="navigation-link">Информация</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item left-item">
               <a class="navigation-link" href="#">Фото и видео</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item right-item">
               <a class="navigation-link" href="#">Карта штата</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item right-item">
               <a class="navigation-link" href="hotels.html">Гостиницы</a>
             </li>
           </ul>
@@ -62,7 +62,7 @@
             </li>
           </ul>
           <div class="reason devil-bridge">
-            <h3 class="reason-title">Там есть мост дьявола</h3>
+            <h3 class="reason-title">Там есть<br> мост дьявола</h3>
             <span class="reason-count">№2</span>
             <p class="reason-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
@@ -94,31 +94,34 @@
             <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
               <div class="checkin form-item">
                 <label class="date-form-title" for="checkin">Дата заезда:</label>
-                <p class="date-input">
+                <p class="input-wrapper">
                   <input class="date-text input" type="text" id="checkin" name="checkin" placeholder="24 апреля 2017">
-                  <button class="date-input-calendar" type="button">Календарь</button>
+                  <button class="date-input-calendar" type="button">Календарь
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
+                  </button>
                 </p>
               </div>
               <div class="checkout form-item">
                 <label class="date-form-title" for="checkout">Дата выезда:</label>
-                <p class="date-input">
+                <p class="input-wrapper">
                   <input class="date-text input" type="text" id="checkout" name="checkout" placeholder="4 июля 2017">
-                  <button class="date-input-calendar" type="button">Календарь</button>  
-                  <!-- вставить svg внутрь button -->
+                  <button class="date-input-calendar" type="button">Календарь
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
+                  </button>
                 </p>
               </div>
               <div class="guest-number-wrapper">
-                <div class="adult-form-item">
+                <div class="form-item-number">
                   <label class="guest-number-title" for="adult-number">Взрослые:</label>
-                  <p class="guest-number-input">
+                  <p class="number-input-wrapper">
                     <button class="decrease-button" type="button">Уменьшить</button>
                     <input class="number-text input" type="text" id="adult-number" name="adult-number" placeholder="2">
                     <button class="increase-button" type="button">Увеличить</button>
                   </p>
                 </div>
-                <div class="kids-form-item">
-                  <label class="guest-number-title" for="kids-number">Дети:</label>
-                  <p class="guest-number-input">
+                <div class="form-item-number">
+                  <label class="guest-number-title kids" for="kids-number">Дети:</label>
+                  <p class="number-input-wrapper">
                     <button class="decrease-button" type="button">Уменьшить</button>
                     <input class="number-text input" type="text" id="kids-number" name="kids-number" placeholder="0">
                     <button class="increase-button" type="button">Увеличить</button>
@@ -134,13 +137,19 @@
     	 	<span class="footer-hashtag">#visitsedona</span>
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-link social-link-twitter" href="#">Твитер</a>
+            <a class="social-link social-link-twitter" href="#">
+              <span class="visually-hidden">Твитер</span>
+            </a>
           </li>
           <li class="social-item">
-            <a class="social-link social-link-fb" href="#">Фейсбук</a>
+            <a class="social-link social-link-fb" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li class="social-item">
-            <a class="social-link social-link-youtube" href="#">Ютуб</a>
+            <a class="social-link social-link-youtube" href="#">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
           </li>
         </ul>
         <address class="footer-copyright">
