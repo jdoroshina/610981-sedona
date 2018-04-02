@@ -10,7 +10,7 @@
   <body>
     <div class="container-wrapper">
       <header class="main-header">
-        <a class="main-logo">
+        <a class="main-logo" href="index.html">
           <img src="img/header-logo.png" width="138" height="70" alt="Логотип Седона">
         </a>
         <nav class="main-navigation">
@@ -30,12 +30,12 @@
           </ul>
         </nav>
       </header>
-    	<main class="сontainer">
-    	 	<h1 class="visually-hidden">Выбор отеля</h1>
+      <main class="сontainer">
+        <h1 class="visually-hidden">Выбор отеля</h1>
         <section class="filters">
           <h2 class="visually-hidden">Фильтры для выбора отеля</h2>
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="infrastructure-filter">
+            <fieldset class="filter-checkbox">
               <legend class="filter-title">Инфраструктура:</legend>
               <ul class="filter-list">
                 <li class="filter-option">
@@ -52,7 +52,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="hotel-type-filter">
+            <fieldset class="filter-checkbox">
               <legend class="filter-title">Тип жилья:</legend>
               <ul class="filter-list">
                 <li class="filter-option">
@@ -69,9 +69,9 @@
                 </li>
               </ul>
             </fieldset>
-            <div class="filter-wrapper">
+            <div class="filter-range-wrapper">
               <fieldset class="filter-range">
-                <legend class="filter-title">Cтоимость в сутки(р):</legend>
+                <legend class="filter-range-title">Cтоимость в сутки (р):</legend>
                 <div class="price-controls">
                   <label class="min-price">от 
                     <input type="text" name="min-price" value="0">
@@ -92,11 +92,11 @@
             </div>
           </form>
         </section>
-    	 	<section class="hotels">
-    	 		<h2 class="visually-hidden">Результаты поиска отеля</h2>
-    	 		<div class="sorting">
+        <section class="hotels">
+          <h2 class="visually-hidden">Результаты поиска отеля</h2>
+          <div class="sorting">
             <h3 class="visually-hidden">Сортировка результатов</h3>
-    	 			<span class="sorting-result">Найдено: 3</span>
+            <span class="sorting-result">Найдено: 3</span>
             <div class="sorting-type">
               <p class="sorting-name">Сортировка:</p>
               <ul class="sorting-list">
@@ -116,11 +116,11 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
               </a>
               <a class="sorting-order-button">
-    	 				  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
               </a>
             </div>
-    	 		</div>
-    	 		<article class="product">
+          </div>
+          <article class="product">
             <div class="product-content">
               <div class="product-image">
                 <img src="img/amara-resort.jpg" width="135" height="90" alt="Отель Amara resort &amp; spa">
@@ -128,15 +128,15 @@
               <div class="product-info">
                 <h4 class="product-name">Amara resort &amp; spa</h4>
                 <p class="product-info-type">Гостиница
-    	 				    <span class="product-info-price">От 4000 р.</span>
+                  <span class="product-info-price">От 4000 р.</span>
                 </p>
                 <div class="product-button">
-    	 				    <a class="product-button-link" href="#">Подробнее</a>
+                  <a class="product-button-link" href="#">Подробнее</a>
                   <a class="product-button-book" href="#">Забронировать</a>
                 </div>
               </div>
             </div>
-    	 			<div class="product-rating">
+            <div class="product-rating">
               <ul class="product-rating-list">
                 <li class="product-rating-item">
                   <span class="visually-hidden">1</span>
@@ -150,10 +150,10 @@
                 <li class="product-rating-item">
                   <span class="visually-hidden">4</span>
                 </li>
-              </ul>				
-    	 				<span class="product-rating-mark">Рейтинг 8,5</span>
+              </ul>
+              <span class="product-rating-mark">Рейтинг 8,5</span>
             </div>
-    	 		</article>
+          </article>
           <article class="product">
             <div class="product-content">
               <div class="product-image">
@@ -181,7 +181,7 @@
                 <li class="product-rating-item">
                   <span class="visually-hidden">3</span>
                 </li>
-              </ul>       
+              </ul>
               <span class="product-rating-mark">Рейтинг 8,9</span>
             </div>
           </article>
@@ -209,12 +209,12 @@
                 <li class="product-rating-item">
                   <span class="visually-hidden">2</span>
                 </li>
-              </ul>       
+              </ul>
               <span class="product-rating-mark">Рейтинг 9,2</span>
             </div>
           </article>
-    	 	</section>
-    	</main>
+        </section>
+      </main>
       <footer class="main-footer">
         <span class="footer-hashtag">#visitsedona</span>
         <ul class="social-list">
