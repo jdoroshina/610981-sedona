@@ -367,24 +367,10 @@ input[type="radio"].visually-hidden {
 
 .map-wrapper {
   position: relative;
-}
+  overflow: hidden;
+  height: 594px;
 
-@keyframes bounce {
-  0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+  background-image: ("../img/map.jpg")
 }
 
 @keyframes shake {
@@ -411,25 +397,29 @@ input[type="radio"].visually-hidden {
 
 .modal-form {
   display: none;
-}
-
-.modal-form-show {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   position: absolute;
-  animation-name: bounce;
-  animation-duration: 0.6s;
   left: 316px;
   right: 316px;
   top: 0px;
   padding: 54px;
+  transform: translateY(-100%);
+  transition: 0.3s;
 
   line-height: 26px;
   font-weight: 700;
 
   box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
   background-color: #ffffff;
+}
+
+.modal-form-show {
+  display: flex;
+
+  animation-name: bounce;
+  animation-duration: 0.6s;
+  transform: translateY(0);
 }
 
 .modal-error {
