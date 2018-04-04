@@ -38,11 +38,11 @@ var myMap,
 
 function init(){
   myMap = new ymaps.Map("map", {
-    center: [55.75399400, 37.62209300],
+    center: [34.87308363, -111.77274849],
     zoom: 7
   });
 
-  myPlacemark = new ymaps.Placemark([55.75399400, 37.62209300], {
+  myPlacemark = new ymaps.Placemark([34.87308363, -111.77274849], {
     hintContent: 'Седона!',
     balloonContent: 'Седона'
   });
