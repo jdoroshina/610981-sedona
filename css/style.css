@@ -727,12 +727,12 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 400px;
-  margin: 0;
-  padding: 35px 125px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: 400px;
+  margin: 0;
+  padding: 35px 125px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   list-style: none;
@@ -800,11 +800,11 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 400px;
-  padding-top: 39px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 400px;
+  padding-top: 39px;
 }
 
 .footer-copyright-text {
@@ -1074,10 +1074,10 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-top: 5px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-top: 5px;
 }
 
 .sorting-name {
@@ -1096,13 +1096,13 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 238px;
   margin: 0;
   margin-right: 505px;
   padding: 0;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   list-style: none;
 }
 
@@ -1136,13 +1136,13 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 34px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 34px;
 }
 
 .sorting-order-button path {
@@ -1164,10 +1164,10 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 25px 72px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding: 25px 72px;
 }
 
 .product-image {
@@ -1184,10 +1184,10 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 430px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: 430px;
 }
 
 .product-name {
@@ -1215,12 +1215,12 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 183px;
-  margin: 0;
-  padding-bottom: 13px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: 183px;
+  margin: 0;
+  padding-bottom: 13px;
 }
 
 .product-button {
@@ -1276,14 +1276,14 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   width: 110px;
   margin: 0;
   margin-bottom: 47px;
   padding: 0;
   padding-top: 5px;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   list-style: none;
 }
 
